@@ -1,28 +1,36 @@
-# Rohit Chouhan — Data Analytics Portfolio
+# Rohit Chouhan — Data Analyst Portfolio
 
-A responsive single-page portfolio for Data Analyst / BI / Microsoft Fabric roles.
+Official personal portfolio site for **Rohit Chouhan** (Data Analyst · BI · Power BI · SQL · Microsoft Fabric).
 
-## Included
-- Responsive `index.html`
-- Dark professional design
-- About, skills, experience, projects and contact sections
-- Microsoft Fabric Medallion Architecture project
-- Power BI / DAX / SQL / InsurTech / API analytics positioning
-- GitHub, LinkedIn and email CTAs
+**Live site:** [https://rohitchouhananalyst.github.io/](https://rohitchouhananalyst.github.io/)
+
+This repository (`RohitChouhanAnalyst.github.io`) is the GitHub Pages source for the live site.
+
+## What’s included
+
+- Responsive single-page portfolio (`index.html`)
+- Dark navy + yellow design (`css/styles.css`)
+- Sections: About, Skills, Background, Projects, Data Engineering, Certifications, Contact
+- Resume download, LinkedIn / GitHub / email CTAs
+- Profile photo and assets in `assets/`
+
+## Project structure
+
+```text
+├── index.html
+├── css/styles.css
+├── js/main.js
+├── assets/
+│   ├── profile.png
+│   ├── resume.pdf
+│   └── favicon.svg
+└── README.md
+```
 
 ## Run locally
-Open `index.html` in any browser.
 
-## Publish on GitHub Pages
-1. Create a GitHub repository, e.g. `rohit-chouhan-portfolio`.
-2. Upload `index.html` and this README.
-3. GitHub → Settings → Pages.
-4. Choose `Deploy from a branch`, select `main`, `/root`, then Save.
-5. Your site will be available through the GitHub Pages URL.
+Open `index.html` in a browser, or serve the folder with any static file server.
 
-## Before publishing
-Replace or add:
-- Project-specific GitHub repository URLs if available.
-- Real dashboard screenshots / GIFs.
-- Any public project demo links.
-- Exact LinkedIn URL if your profile URL differs.
+## Deploy
+
+Pushes to `main` publish automatically via GitHub Pages for this user site repository.
