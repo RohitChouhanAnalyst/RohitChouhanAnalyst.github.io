@@ -438,16 +438,19 @@ button {
 }
 
 .portrait-photo {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 122%;
+  height: 122%;
+  max-width: none;
+  translate: -50% -50%;
   display: block;
   object-fit: cover;
-  /* cutout subject sits in the lower portion of the existing PNG canvas */
-  object-position: center 72%;
-  border-radius: 50%;
+  object-position: center 38%;
+  border-radius: 0;
   transform: none;
   filter: none;
-  max-width: 100%;
   pointer-events: none;
   user-select: none;
 }
