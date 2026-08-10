@@ -2,7 +2,6 @@
   const navToggle = document.getElementById("nav-toggle");
   const navLinks = document.getElementById("nav-links");
   const resumeButtons = Array.from(document.querySelectorAll(".js-resume"));
-  const resumeNote = document.getElementById("resume-note");
 
   // Remove tracking params (utm_*, gclid, fbclid, etc.) from the visible URL
   const cleanTrackingParams = () => {
@@ -87,10 +86,11 @@
   const sectionIds = [
     "home",
     "about",
-    "skills",
-    "experience",
     "projects",
+    "skills",
     "data-engineering",
+    "ai-automation",
+    "experience",
     "certifications",
     "contact",
   ];
@@ -216,63 +216,52 @@
         return;
       }
 
-      // Mobile: allow native dialer; still confirm in UI
       window.setTimeout(() => {
         showToast(`Calling ${phone}`);
       }, 200);
     });
   });
 
-  const preventResumeClick = (event) => {
-    event.preventDefault();
-    showToast("Resume file is temporarily unavailable");
-  };
+  // Resume: keep buttons enabled against assets/resume.pdf
+  resumeButtons.forEach((btn) => {
+    btn.classList.remove("is-disabled");
+    btn.removeAttribute("aria-disabled");
+    btn.removeAttribute("title");
+    btn.setAttribute("href", "assets/resume.pdf");
+    btn.setAttribute("download", "Rohit_Chouhan_Resume.pdf");
+  });
 
-  const markResumeMissing = () => {
-    resumeButtons.forEach((btn) => {
-      btn.classList.add("is-disabled");
-      btn.setAttribute("aria-disabled", "true");
-      btn.setAttribute("title", "Resume file is temporarily unavailable");
-      btn.removeAttribute("download");
-      btn.addEventListener("click", preventResumeClick);
-    });
-    if (resumeNote) resumeNote.hidden = false;
-  };
+  // Configurable Power BI embeds via data-powerbi-embed-url (POWER_BI_EMBED_URL)
+  const mountPowerBiEmbeds = () => {
+    document.querySelectorAll(".js-powerbi-embed").forEach((host) => {
+      const url = (host.getAttribute("data-powerbi-embed-url") || "").trim();
+      if (!url) return;
 
-  const enableResume = () => {
-    resumeButtons.forEach((btn) => {
-      btn.classList.remove("is-disabled");
-      btn.removeAttribute("aria-disabled");
-      btn.removeAttribute("title");
-      btn.setAttribute("download", "Rohit_Chouhan_Resume.pdf");
-      btn.removeEventListener("click", preventResumeClick);
-    });
-    if (resumeNote) resumeNote.hidden = true;
-  };
+      const title =
+        host.getAttribute("data-title") || "Live Interactive Power BI Dashboard";
+      const frame = host.querySelector(".powerbi-frame");
+      const placeholderCopy = host.querySelector(".powerbi-placeholder-copy");
+      if (!frame) return;
 
-  const checkResume = async () => {
-    if (!resumeButtons.length) return;
-    try {
-      let response = await fetch("assets/resume.pdf", {
-        method: "HEAD",
-        cache: "no-store",
-      });
-      // Some hosts reject HEAD; fall back to a ranged GET
-      if (!response.ok || response.status === 405) {
-        response = await fetch("assets/resume.pdf", {
-          method: "GET",
-          headers: { Range: "bytes=0-0" },
-          cache: "no-store",
-        });
+      frame.classList.remove("powerbi-placeholder");
+      frame.removeAttribute("role");
+      frame.removeAttribute("aria-label");
+      frame.innerHTML = "";
+
+      const iframe = document.createElement("iframe");
+      iframe.src = url;
+      iframe.title = title;
+      iframe.loading = "lazy";
+      iframe.allowFullscreen = true;
+      iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      frame.appendChild(iframe);
+
+      if (placeholderCopy) {
+        placeholderCopy.textContent =
+          "Explore the dashboard interactively using filters, charts, and report pages.";
       }
-      if (response.ok || response.status === 206) enableResume();
-      else markResumeMissing();
-    } catch {
-      markResumeMissing();
-    }
+    });
   };
 
-  // Optimistic enable so the button works even if HEAD is blocked
-  enableResume();
-  checkResume();
+  mountPowerBiEmbeds();
 })();

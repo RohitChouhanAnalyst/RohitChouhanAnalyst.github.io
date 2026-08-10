@@ -656,6 +656,13 @@ button {
   font-weight: 600;
 }
 
+.chip-core {
+  border-color: rgba(253, 191, 5, 0.85);
+  background: rgba(253, 191, 5, 0.16);
+  color: #ffe08a;
+  box-shadow: inset 0 0 0 1px rgba(253, 191, 5, 0.12);
+}
+
 .skill-group h3 {
   margin-bottom: 0.85rem;
   color: var(--accent);
@@ -929,9 +936,96 @@ button {
   padding-top: 1.15rem;
 }
 
-.dashboard-embed {
+.dashboard-embed,
+.powerbi-embed {
   margin-top: 1.25rem;
   min-width: 0;
+}
+
+.project-impact ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.project-impact li + li {
+  margin-top: 0.25rem;
+}
+
+.powerbi-frame {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(253, 191, 5, 0.28);
+  background: rgba(0, 0, 0, 0.22);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(253, 191, 5, 0.08);
+  overflow: hidden;
+}
+
+.powerbi-frame iframe {
+  display: block;
+  width: 100%;
+  height: 800px;
+  border: 0;
+  background: #010018;
+}
+
+.powerbi-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(253, 191, 5, 0.08), transparent 45%),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.02) 10px,
+      rgba(255, 255, 255, 0.02) 20px
+    ),
+    rgba(0, 0, 0, 0.28);
+}
+
+.powerbi-placeholder p,
+.powerbi-placeholder-copy {
+  margin: 0;
+  max-width: 36ch;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.ai-panel {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.ai-panel > .card h3,
+.ai-future-slot h3 {
+  margin: 0 0 0.55rem;
+  color: var(--accent);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ai-future-slot {
+  padding: 1.35rem 1.4rem;
+  border-radius: var(--radius);
+  border: 1px dashed rgba(253, 191, 5, 0.35);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.ai-future-slot p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .dashboard-embed-head h4 {
@@ -1273,7 +1367,9 @@ button {
 .project,
 .case-study,
 .dashboard-embed,
-.dashboard-frame {
+.dashboard-frame,
+.powerbi-embed,
+.powerbi-frame {
   min-width: 0;
 }
 
@@ -1315,7 +1411,8 @@ button {
     padding: 3.25rem 0;
   }
 
-  .dashboard-frame iframe {
+  .dashboard-frame iframe,
+  .powerbi-frame iframe {
     height: 680px;
   }
 }
@@ -1482,7 +1579,8 @@ button {
     padding: 1rem;
   }
 
-  .dashboard-frame iframe {
+  .dashboard-frame iframe,
+  .powerbi-frame iframe {
     height: 520px;
   }
 
