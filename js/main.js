@@ -225,14 +225,14 @@
 
   const preventResumeClick = (event) => {
     event.preventDefault();
-    showToast("Add assets/resume.pdf to enable download");
+    showToast("Resume file is temporarily unavailable");
   };
 
   const markResumeMissing = () => {
     resumeButtons.forEach((btn) => {
       btn.classList.add("is-disabled");
       btn.setAttribute("aria-disabled", "true");
-      btn.setAttribute("title", "Add assets/resume.pdf to enable download");
+      btn.setAttribute("title", "Resume file is temporarily unavailable");
       btn.removeAttribute("download");
       btn.addEventListener("click", preventResumeClick);
     });
@@ -244,7 +244,7 @@
       btn.classList.remove("is-disabled");
       btn.removeAttribute("aria-disabled");
       btn.removeAttribute("title");
-      btn.setAttribute("download", "");
+      btn.setAttribute("download", "Rohit_Chouhan_Resume.pdf");
       btn.removeEventListener("click", preventResumeClick);
     });
     if (resumeNote) resumeNote.hidden = true;
@@ -253,16 +253,26 @@
   const checkResume = async () => {
     if (!resumeButtons.length) return;
     try {
-      const response = await fetch("assets/resume.pdf", {
+      let response = await fetch("assets/resume.pdf", {
         method: "HEAD",
         cache: "no-store",
       });
-      if (response.ok) enableResume();
+      // Some hosts reject HEAD; fall back to a ranged GET
+      if (!response.ok || response.status === 405) {
+        response = await fetch("assets/resume.pdf", {
+          method: "GET",
+          headers: { Range: "bytes=0-0" },
+          cache: "no-store",
+        });
+      }
+      if (response.ok || response.status === 206) enableResume();
       else markResumeMissing();
     } catch {
       markResumeMissing();
     }
   };
 
+  // Optimistic enable so the button works even if HEAD is blocked
+  enableResume();
   checkResume();
 })();
