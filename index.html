@@ -20,12 +20,12 @@
   <meta name="twitter:title" content="Rohit Chouhan | Data Analyst · BI · Microsoft Fabric">
   <meta name="twitter:description" content="Data Analyst portfolio covering SQL, Power BI, Microsoft Fabric, ETL, and API analytics.">
 
-  <meta name="theme-color" content="#e8eef2">
+  <meta name="theme-color" content="#020024">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 
@@ -73,9 +73,9 @@
 
       <nav id="nav-links" class="nav-links" aria-label="Primary">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skill</a>
+        <a href="#experience">Background</a>
         <a href="#projects">Projects</a>
         <a href="#data-engineering">Data Engineering</a>
         <a href="#certifications">Certifications</a>
@@ -100,19 +100,25 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-grid-bg" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
+      <div class="hero-inner">
         <div>
-          <p class="eyebrow">Data Analyst · BI · Microsoft Fabric</p>
-          <h1 id="hero-title">Rohit Chouhan</h1>
-          <p class="hero-role">Data Analyst | Business Intelligence | Power BI | SQL | Microsoft Fabric</p>
+          <p class="pill" aria-label="Portfolio type">
+            <span class="pill-accent">Data Analyst</span>&nbsp;Portfolio
+          </p>
+          <h1 id="hero-title">
+            <span class="hero-name-line">Rohit</span>
+            <span class="hero-name-line is-accent">Chouhan</span>
+          </h1>
+          <p class="hero-tagline">
+            I turn business <span class="hl">data</span> into <span class="hl">decisions</span>
+          </p>
           <p class="hero-lead">
             Business Data Analyst with 4+ years of relevant experience across SQL, Power BI, ETL, API analytics, and InsurTech operations — building reporting, data architecture, and modern analytics solutions.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn js-resume" id="resume-download" href="assets/resume.pdf" download="Rohit_Chouhan_Resume.pdf">Download Resume</a>
+            <a class="btn btn-primary js-resume" id="resume-download" href="assets/resume.pdf" download="Rohit_Chouhan_Resume.pdf">Download CV</a>
+            <a class="btn" href="#projects">View Projects</a>
             <a class="btn btn-ghost" href="https://www.linkedin.com/in/rohitchouhananalyst/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="btn btn-ghost" href="https://github.com/RohitChouhanAnalyst" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="btn btn-ghost" href="mailto:rohitchouhan.analyst@gmail.com?cc=rck6977@gmail.com&amp;subject=Portfolio%20Contact%20-%20Rohit%20Chouhan">Email Me</a>
@@ -155,15 +161,17 @@
           </div>
         </aside>
       </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About Me"><span aria-hidden="true">⌄</span></a>
     </section>
 
     <!-- ABOUT -->
     <section class="section section-alt" id="about" aria-labelledby="about-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="section-kicker">About</p>
-          <h2 id="about-title">Who I am and how I work with data</h2>
-          <p>A hybrid analytics profile spanning business analysis, reporting, data architecture, integrations, and production problem-solving.</p>
+          <h2 id="about-title"><span class="pill">About Me</span></h2>
+          <p class="about-lead">
+            <span class="hl">Business Data Analyst</span> with a hybrid profile across analytics, reporting, data architecture, integrations, and production problem-solving in <span class="hl">InsurTech</span> operations.
+          </p>
         </div>
 
         <div class="grid-auto">
@@ -213,8 +221,7 @@
     <section class="section" id="skills" aria-labelledby="skills-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="section-kicker">Skills</p>
-          <h2 id="skills-title">Technology ecosystem</h2>
+          <h2 id="skills-title"><span class="pill">Technical Skills</span></h2>
           <p>Organized by capability area. No skill percentages — hierarchy is based on how these tools appear in my work and CV.</p>
         </div>
 
@@ -350,8 +357,7 @@
     <section class="section section-alt" id="experience" aria-labelledby="experience-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="section-kicker">Experience</p>
-          <h2 id="experience-title">Professional timeline</h2>
+          <h2 id="experience-title"><span class="pill">Background</span></h2>
           <p>From data operations leadership to business data analysis and data architecture across insurance and operations domains.</p>
         </div>
 
@@ -420,8 +426,7 @@
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="section-kicker">Projects</p>
-          <h2 id="projects-title">Selected work</h2>
+          <h2 id="projects-title"><span class="pill">Projects</span></h2>
           <p>Projects demonstrating BI, advanced SQL, Microsoft Fabric analytics, embedded analytics, and InsurTech production support.</p>
         </div>
 
@@ -605,8 +610,7 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
     <section class="section section-alt" id="data-engineering" aria-labelledby="de-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="section-kicker">Data Engineering</p>
-          <h2 id="de-title">Modern data pipeline focus</h2>
+          <h2 id="de-title"><span class="pill">Data Engineering</span></h2>
           <p>Career direction toward analytics engineering and modern data platforms — with clear distinction between core capabilities and expanding skills.</p>
         </div>
 
@@ -682,8 +686,7 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
     <section class="section" id="certifications" aria-labelledby="certs-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="section-kicker">Credentials</p>
-          <h2 id="certs-title">Certifications &amp; assessments</h2>
+          <h2 id="certs-title"><span class="pill">Certifications</span></h2>
           <p>Credentials listed in the current CV. Credential URLs are omitted where not available.</p>
         </div>
 
@@ -725,8 +728,7 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
     <section class="section section-alt" id="contact" aria-labelledby="contact-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="section-kicker">Contact</p>
-          <h2 id="contact-title">Let's connect</h2>
+          <h2 id="contact-title"><span class="pill">Contact</span></h2>
           <p>Open to Data Analyst, BI Analyst, Power BI, Business Analytics, Analytics Engineer, and Microsoft Fabric–oriented roles.</p>
         </div>
 
