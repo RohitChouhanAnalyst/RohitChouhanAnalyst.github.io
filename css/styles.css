@@ -1279,6 +1279,30 @@ button {
     --nav-h: 68px;
   }
 
+  /* Same navy+yellow palette, clearer navy on mobile OLED */
+  body {
+    background:
+      radial-gradient(ellipse 80% 55% at 90% 6%, rgba(253, 191, 5, 0.12), transparent 55%),
+      radial-gradient(ellipse 65% 50% at 8% 78%, rgba(100, 90, 230, 0.26), transparent 55%),
+      linear-gradient(180deg, #05053a 0%, #0a0a55 45%, #05053a 100%);
+  }
+
+  .site-nav {
+    background: #05053a;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .brand-mark {
+    background: #fdbf05;
+    color: #020024;
+    border: 2px solid #ffffff;
+    isolation: isolate;
+    transform: translateZ(0);
+    filter: none;
+    opacity: 1;
+  }
+
   .nav-toggle {
     display: inline-flex;
   }
@@ -1291,7 +1315,7 @@ button {
     align-items: stretch;
     gap: 0.25rem;
     padding: 1rem 1.25rem 1.25rem;
-    background: rgba(2, 0, 36, 0.97);
+    background: #05053a;
     border-bottom: 1px solid var(--line);
     max-height: calc(100vh - var(--nav-h));
     overflow-y: auto;
