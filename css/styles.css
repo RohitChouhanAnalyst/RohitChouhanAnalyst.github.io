@@ -305,6 +305,7 @@ button {
   grid-template-columns: 1.15fr 0.85fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
+  overflow: visible;
 }
 
 .pill {
@@ -407,6 +408,7 @@ button {
   border: 0;
   box-shadow: none;
   padding: 0;
+  overflow: visible;
 }
 
 .hero-card::before,
@@ -438,20 +440,21 @@ button {
   transform: scale(1.04);
 }
 
-/* Canva-style portrait: yellow disc + white ring behind cutout */
+/* Canva-style portrait: complete yellow circle + white ring, head pops above */
 .portrait {
-  --portrait-size: min(320px, 72vw);
+  --portrait-size: min(300px, 70vw);
   position: relative;
-  width: calc(var(--portrait-size) + 24px);
-  height: calc(var(--portrait-size) + 56px);
-  margin: 0.4rem auto 0.5rem;
+  width: calc(var(--portrait-size) + 28px);
+  height: calc(var(--portrait-size) + 78px);
+  margin: 0.25rem auto 0.85rem;
+  overflow: visible;
 }
 
 .portrait-disc,
 .portrait-ring {
   position: absolute;
   left: 50%;
-  bottom: 8px;
+  top: 52px;
   translate: -50% 0;
   width: var(--portrait-size);
   height: var(--portrait-size);
@@ -467,10 +470,10 @@ button {
 
 .portrait-ring {
   z-index: 2;
-  width: calc(var(--portrait-size) + 14px);
-  height: calc(var(--portrait-size) + 14px);
-  bottom: 1px;
-  border: 7px solid #fff;
+  width: calc(var(--portrait-size) + 16px);
+  height: calc(var(--portrait-size) + 16px);
+  top: 44px;
+  border: 8px solid #fff;
   background: transparent;
   box-sizing: border-box;
 }
@@ -478,16 +481,16 @@ button {
 .portrait-photo {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  top: 10px;
   z-index: 3;
-  width: calc(var(--portrait-size) * 1.12);
+  width: calc(var(--portrait-size) * 0.96);
   height: auto;
   max-width: none;
   translate: -50% 0;
   display: block;
   object-fit: contain;
-  object-position: center bottom;
-  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.25));
+  object-position: center top;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.28));
   pointer-events: none;
   user-select: none;
 }
