@@ -440,18 +440,18 @@ button {
 
 /* Canva-style portrait: yellow disc + white ring behind cutout */
 .portrait {
-  --portrait-size: min(300px, 68vw);
+  --portrait-size: min(320px, 72vw);
   position: relative;
-  width: var(--portrait-size);
-  height: calc(var(--portrait-size) + 28px);
-  margin: 0 auto 0.35rem;
+  width: calc(var(--portrait-size) + 24px);
+  height: calc(var(--portrait-size) + 56px);
+  margin: 0.4rem auto 0.5rem;
 }
 
 .portrait-disc,
 .portrait-ring {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 8px;
   translate: -50% 0;
   width: var(--portrait-size);
   height: var(--portrait-size);
@@ -462,15 +462,15 @@ button {
 .portrait-disc {
   z-index: 1;
   background: var(--accent);
-  box-shadow: var(--shadow);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
 .portrait-ring {
   z-index: 2;
-  width: calc(var(--portrait-size) + 12px);
-  height: calc(var(--portrait-size) + 12px);
-  bottom: -6px;
-  border: 6px solid #fff;
+  width: calc(var(--portrait-size) + 14px);
+  height: calc(var(--portrait-size) + 14px);
+  bottom: 1px;
+  border: 7px solid #fff;
   background: transparent;
   box-sizing: border-box;
 }
@@ -478,16 +478,16 @@ button {
 .portrait-photo {
   position: absolute;
   left: 50%;
-  bottom: -2px;
+  bottom: 0;
   z-index: 3;
-  width: calc(var(--portrait-size) * 1.08);
+  width: calc(var(--portrait-size) * 1.12);
   height: auto;
   max-width: none;
   translate: -50% 0;
   display: block;
   object-fit: contain;
   object-position: center bottom;
-  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.28));
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.25));
   pointer-events: none;
   user-select: none;
 }
