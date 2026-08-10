@@ -2,145 +2,120 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Rohit Chouhan — Data Analyst, BI & Microsoft Fabric portfolio. SQL, Power BI, ETL, API Analytics and Data Engineering.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Rohit Chouhan — Data Analyst, Power BI, Microsoft Fabric, SQL, ETL and API Analytics portfolio.">
+<meta name="author" content="Rohit Chouhan">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Rohit Chouhan | Data Analyst • BI • Microsoft Fabric">
+<meta property="og:description" content="Data Analyst portfolio covering SQL, Power BI, DAX, Microsoft Fabric, ETL, API analytics and InsurTech analytics.">
+<meta property="og:url" content="https://rohitchouhananalyst.github.io/">
 <title>Rohit Chouhan | Data Analyst • BI • Microsoft Fabric</title>
 <style>
-:root{
-  --bg:#07111f; --panel:#0c192b; --panel2:#101f34; --text:#edf4ff; --muted:#9db0c9;
-  --line:rgba(255,255,255,.09); --accent:#63b3ff; --accent2:#8b7cff; --good:#56d6a0;
-  --shadow:0 20px 60px rgba(0,0,0,.28); --max:1180px;
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 85% 10%,rgba(99,179,255,.14),transparent 28%),radial-gradient(circle at 10% 30%,rgba(139,124,255,.10),transparent 25%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.02em}.brand span{color:var(--accent)}
-.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--text)}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 17px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.2s}
-.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06101e;border:0}.btn:hover{transform:translateY(-2px)}
-.hero{padding:95px 0 70px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
-.kicker{display:inline-flex;padding:7px 11px;border:1px solid rgba(99,179,255,.25);border-radius:999px;color:#b9dbff;background:rgba(99,179,255,.07);font-size:13px;font-weight:700}
-h1{font-size:clamp(44px,7vw,78px);line-height:1.02;letter-spacing:-.055em;margin:18px 0}
-.gradient{background:linear-gradient(100deg,#fff,#9bd3ff 45%,#a49aff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:19px;color:var(--muted);max-width:730px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
-.meta{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:13px}.meta b{color:var(--text)}
-.hero-card{background:linear-gradient(145deg,rgba(16,31,52,.95),rgba(8,19,33,.95));border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}
-.avatar{height:170px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(99,179,255,.18),rgba(139,124,255,.16));border:1px solid var(--line);font-size:64px;font-weight:900;letter-spacing:-.08em}
-.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.stat{padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.stat strong{font-size:22px}.stat small{display:block;color:var(--muted)}
-section{padding:78px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}h2{font-size:34px;letter-spacing:-.035em;margin:0} .sub{color:var(--muted);max-width:680px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:rgba(12,25,43,.76);border:1px solid var(--line);border-radius:20px;padding:24px}.card h3{margin:0 0 8px;font-size:19px}.card p{color:var(--muted);margin:8px 0}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.tag{font-size:12px;color:#c7d7ea;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:5px 8px;border-radius:8px}
-.skill{margin-bottom:17px}.skilltop{display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px}.skilltop span:last-child{color:var(--muted)}.bar{height:7px;background:#17273b;border-radius:999px;overflow:hidden}.fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-.timeline{position:relative;margin-top:12px}.timeline:before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:1px;background:var(--line)}
-.job{position:relative;padding-left:34px;margin:0 0 28px}.dot{position:absolute;left:3px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(99,179,255,.09)}.job h3{margin:0}.job .date{color:var(--accent);font-size:13px;font-weight:700}.job p{color:var(--muted);margin:6px 0}
-.project{display:flex;flex-direction:column;min-height:290px}.project .num{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.12em}.project .bottom{margin-top:auto;padding-top:18px}.project ul{padding-left:18px;color:var(--muted);margin-bottom:0}.project li{margin:6px 0}.architecture{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:18px}.layer{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.035);font-size:12px;font-weight:800}.arrow{color:var(--muted)}
-.callout{border:1px solid rgba(99,179,255,.25);background:linear-gradient(135deg,rgba(99,179,255,.08),rgba(139,124,255,.07));border-radius:22px;padding:28px;display:flex;justify-content:space-between;gap:25px;align-items:center}
-footer{padding:30px 0 50px;color:var(--muted);border-top:1px solid var(--line);font-size:13px}.footerin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:850px){.hero-grid,.grid2,.grid3{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:60px}.section-head{display:block}.section-head .sub{margin-top:10px}}
+:root{--bg:#07111f;--panel:#0c192b;--text:#edf4ff;--muted:#9db0c9;--line:rgba(255,255,255,.09);--a:#63b3ff;--b:#8b7cff;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 10%,rgba(99,179,255,.14),transparent 28%),radial-gradient(circle at 10% 30%,rgba(139,124,255,.1),transparent 25%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:850}.brand span{color:var(--a)}.links{display:flex;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:#fff}.menu{display:none;background:none;color:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:12px;border:1px solid var(--line);font-weight:750;font-size:14px;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,var(--a),var(--b));color:#06101e;border:0}
+.hero{padding:92px 0 70px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}.kicker{display:inline-flex;padding:7px 11px;border:1px solid rgba(99,179,255,.25);border-radius:999px;color:#b9dbff;background:rgba(99,179,255,.07);font-size:13px;font-weight:750}h1{font-size:clamp(44px,7vw,78px);line-height:1.02;letter-spacing:-.055em;margin:18px 0}.gradient{background:linear-gradient(100deg,#fff,#9bd3ff 45%,#a49aff);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:19px;color:var(--muted);max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.meta{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:13px}.meta b{color:#fff}
+.hero-card,.card{background:rgba(12,25,43,.78);border:1px solid var(--line);border-radius:20px;padding:24px}.avatar{height:170px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(99,179,255,.18),rgba(139,124,255,.16));border:1px solid var(--line);font-size:64px;font-weight:900}.mini{margin-top:14px;padding:15px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.mini strong{display:block}.mini span{color:var(--muted);font-size:13px}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.stat{padding:14px;border:1px solid var(--line);border-radius:14px}.stat strong{font-size:22px}.stat small{display:block;color:var(--muted)}
+section{padding:78px 0}.head{margin-bottom:28px}h2{font-size:34px;letter-spacing:-.035em;margin:0}.sub{color:var(--muted);max-width:720px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card h3{margin:0 0 8px;font-size:19px}.card p{color:var(--muted);margin:8px 0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.tag{font-size:12px;color:#c7d7ea;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:5px 8px;border-radius:8px}
+.skill{margin-bottom:20px}.skill:last-child{margin:0}.skill h4{margin:0 0 6px}.skill p{margin:0;font-size:14px}.skill b{color:#fff}.timeline{position:relative}.timeline:before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:1px;background:var(--line)}.job{position:relative;padding-left:34px;margin-bottom:30px}.job:last-child{margin:0}.dot{position:absolute;left:3px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--a)}.date{color:var(--a);font-size:13px;font-weight:750}.job h3{margin:2px 0 5px}.job p{margin:5px 0}
+.project{display:flex;flex-direction:column;min-height:310px}.project.featured{grid-column:1/-1}.num{font-size:12px;color:var(--a);font-weight:800;letter-spacing:.12em}.architecture{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:18px 0}.layer{padding:9px 11px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.035);font-size:12px;font-weight:800}.casegrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:5px}.case{padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.case strong{display:block}.case span{font-size:13px;color:var(--muted)}ul{color:var(--muted);padding-left:19px}.bottom{margin-top:auto;padding-top:18px}
+.cert h3{margin-bottom:3px}.cert p{margin:0}.contact{display:flex;align-items:center;justify-content:space-between;gap:20px}.contact strong{display:block;font-size:18px}.contact span{color:var(--muted);font-size:14px}.note{color:var(--muted);font-size:13px}footer{padding:30px 0 50px;color:var(--muted);border-top:1px solid var(--line);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:850px){.hero-grid,.grid2,.grid3,.casegrid{grid-template-columns:1fr}.project.featured{grid-column:auto}.links{display:none}.menu{display:block}.links.open{display:flex;position:absolute;left:0;right:0;top:70px;padding:18px 24px;flex-direction:column;background:#07111f;border-bottom:1px solid var(--line)}.contact{display:block}.contact .btn{margin-top:14px}.hero{padding-top:60px}}
 </style>
 </head>
 <body>
 <nav><div class="wrap navin">
-  <a class="brand" href="#top">Rohit<span>.</span></a>
-  <div class="navlinks">
-    <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
-  </div>
-  <a class="btn" href="mailto:rck6977@gmail.com">Let's connect</a>
+<a class="brand" href="#top">Rohit<span>.</span></a>
+<div class="links" id="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#data-engineering">Data Engineering</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a></div>
+<button class="menu" id="menu" aria-label="Open navigation">☰</button>
 </div></nav>
 
 <main id="top">
 <section class="hero"><div class="wrap hero-grid">
-  <div>
-    <span class="kicker">DATA ANALYST • BI • MICROSOFT FABRIC</span>
-    <h1>Turning business data into <span class="gradient">decisions.</span></h1>
-    <p class="lead">Business Data Analyst with 4+ years of experience across SQL, Power BI, ETL, API analytics and InsurTech operations — now building modern analytics solutions with Microsoft Fabric.</p>
-    <div class="actions">
-      <a class="btn primary" href="#projects">Explore my work →</a>
-      <a class="btn" href="https://github.com/RohitChouhanAnalyst" target="_blank" rel="noopener">GitHub ↗</a>
-      <a class="btn" href="mailto:rck6977@gmail.com">Email me</a>
-    </div>
-    <div class="meta"><span>📍 <b>Punjab, India</b></span><span>✉ <b>rck6977@gmail.com</b></span><span>⌁ <b>Open to opportunities</b></span></div>
-  </div>
-  <div class="hero-card">
-    <div class="avatar">RC</div>
-    <div class="statgrid">
-      <div class="stat"><strong>4+</strong><small>Years relevant experience</small></div>
-      <div class="stat"><strong>SQL</strong><small>Advanced analytics</small></div>
-      <div class="stat"><strong>BI</strong><small>Power BI & reporting</small></div>
-      <div class="stat"><strong>Fabric</strong><small>End-to-end data engineering</small></div>
-    </div>
-  </div>
+<div>
+<span class="kicker">DATA ANALYST • POWER BI • MICROSOFT FABRIC</span>
+<h1>Turning business data into <span class="gradient">decisions.</span></h1>
+<p class="lead">Business Data Analyst with 4+ years of relevant experience across SQL, Power BI, ETL, API analytics and InsurTech operations — building reporting, data architecture and modern analytics solutions.</p>
+<div class="actions">
+<a class="btn primary" href="#projects">Explore my work →</a>
+<a class="btn" href="https://github.com/RohitChouhanAnalyst" target="_blank" rel="noopener">GitHub ↗</a>
+<a class="btn" href="mailto:rohitchouhan.analyst@gmail.com?cc=rck6977@gmail.com&subject=Portfolio%20Contact%20%E2%80%94%20Rohit%20Chouhan">Email me</a>
+</div>
+<div class="meta"><span>📍 <b>Rajpura, Punjab</b></span><span>📱 <b><a href="tel:+917355987689">+91 73559 87689</a></b></span><span>✉ <b>rohitchouhan.analyst@gmail.com</b></span><span>⌁ <b>Open to opportunities</b></span></div>
+</div>
+<div class="hero-card"><div class="avatar">RC</div><div class="mini"><strong>Rohit Chouhan</strong><span>Data Analyst | Power BI | Microsoft Fabric | SQL | ETL | API Analytics | Workflow AI Automation</span></div><div class="stats"><div class="stat"><strong>4+</strong><small>Years relevant experience</small></div><div class="stat"><strong>SQL</strong><small>Advanced analytics</small></div><div class="stat"><strong>BI</strong><small>Power BI & reporting</small></div><div class="stat"><strong>Fabric</strong><small>Modern data platform</small></div></div></div>
 </div></section>
 
-<section id="about"><div class="wrap">
-  <div class="section-head"><div><h2>About me</h2><p class="sub">A hybrid profile across analytics, data architecture, reporting and production problem-solving.</p></div></div>
-  <div class="grid2">
-    <div class="card"><h3>What I do</h3><p>I design reporting datasets, write complex SQL, build Power BI analytics, validate ETL/data movement, analyze APIs and perform RCA for production issues. My work sits between business requirements and technical implementation.</p><div class="tags"><span class="tag">Business Analytics</span><span class="tag">Data Architecture</span><span class="tag">RCA</span><span class="tag">API Analytics</span><span class="tag">Production Support</span></div></div>
-    <div class="card"><h3>Where I'm heading</h3><p>I'm expanding from BI and business analytics into modern data engineering with Microsoft Fabric — OneLake, Lakehouse, Warehouse, PySpark, Delta tables, semantic models and Direct Lake.</p><div class="tags"><span class="tag">Microsoft Fabric</span><span class="tag">OneLake</span><span class="tag">Lakehouse</span><span class="tag">PySpark</span><span class="tag">Direct Lake</span></div></div>
-  </div>
+<section id="about"><div class="wrap"><div class="head"><h2>About me</h2><p class="sub">A hybrid profile across analytics, data architecture, reporting, integrations and production problem-solving.</p></div><div class="grid2">
+<div class="card"><h3>What I do</h3><p>I design reporting datasets, develop complex SQL, build BI reporting, validate ETL and data movement, analyze REST APIs and perform RCA for production incidents across insurance workflows.</p><div class="tags"><span class="tag">Business Analytics</span><span class="tag">Data Architecture</span><span class="tag">RCA</span><span class="tag">API Analytics</span><span class="tag">Production Support</span></div></div>
+<div class="card"><h3>Current direction</h3><p>I am expanding my analytics foundation into modern data engineering with Microsoft Fabric, including OneLake, Lakehouse, Warehouse, semantic models, Direct Lake, PySpark and modern data warehousing.</p><div class="tags"><span class="tag">Microsoft Fabric</span><span class="tag">OneLake</span><span class="tag">Lakehouse</span><span class="tag">Warehouse</span><span class="tag">Direct Lake</span></div></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap"><div class="head"><h2>Technical toolkit</h2><p class="sub">Skills and platforms documented in my current CV.</p></div><div class="grid2">
+<div class="card">
+<div class="skill"><h4>Advanced SQL</h4><p><b>MySQL • PostgreSQL</b> — complex queries, joins, subqueries, CTEs, window functions, views, stored procedures, JSON functions and query optimization.</p></div>
+<div class="skill"><h4>Microsoft Fabric</h4><p><b>OneLake • Lakehouse • Warehouse</b> — SQL Analytics Endpoint, semantic models, Direct Lake, star/snowflake schema and fact/dimension modeling.</p></div>
+<div class="skill"><h4>Business Intelligence</h4><p><b>Power BI • Metabase • Looker Studio • Zoho Analytics • Tableau</b></p></div>
+<div class="skill"><h4>Programming</h4><p><b>Python • Pandas • NumPy • Jupyter</b> — data analysis, cleaning and EDA.</p></div>
+</div>
+<div class="card">
+<div class="skill"><h4>ETL & Integration</h4><p>ETL, data transformation, validation, REST API integration, JSON processing, Google Sheets integration and Power Automate.</p></div>
+<div class="skill"><h4>Data Analysis & Reporting</h4><p>Advanced Excel, Power Query, Power Pivot, Pivot Tables, VLOOKUP/XLOOKUP, Macros, KPI reporting, RCA and Google Sheets.</p></div>
+<div class="skill"><h4>Cloud & Data Platforms</h4><p>AWS S3, Azure Blob Storage, Snowflake (Basic), Amazon Redshift (Basic).</p></div>
+<div class="skill"><h4>AI & Productivity</h4><p>ChatGPT, Claude, Gemini, Prompt Engineering, AI-assisted Development, SQL Debugging, n8n Workflow Automation and MCP.</p></div>
+</div>
+</div></div></section>
+
+<section id="data-engineering"><div class="wrap"><div class="head"><h2>Data engineering toolkit</h2><p class="sub">Current hands-on Fabric foundation plus the data engineering technologies I am learning and building toward.</p></div><div class="grid2">
+<div class="card">
+<div class="skill"><h4>Microsoft Azure</h4><p><b>Azure Data Lake Storage (ADLS Gen2) • Azure Data Factory</b> — data lake concepts, ingestion and ETL/ELT orchestration.</p></div>
+<div class="skill"><h4>Microsoft Fabric</h4><p><b>OneLake • Lakehouse • Warehouse • Fabric Pipelines • PySpark • Delta Tables • SQL Analytics Endpoint • Direct Lake</b></p></div>
+<div class="skill"><h4>ETL / ELT & Orchestration</h4><p><b>ETL • Data Transformation • Data Validation • Azure Data Factory • Fabric Pipelines • Apache Airflow</b></p></div>
+</div>
+<div class="card">
+<div class="skill"><h4>Cloud Data Platforms</h4><p><b>Snowflake • AWS S3 • Azure Blob Storage • Amazon Redshift</b></p></div>
+<div class="skill"><h4>Data Processing & Modeling</h4><p><b>PySpark • SQL • Delta Lake • Star Schema • Snowflake Schema • Fact & Dimension Modeling</b></p></div>
+<div class="skill"><h4>Analytics / BI</h4><p><b>Power BI • DAX • Power Query • Metabase • Google Looker Studio • Zoho Analytics • Tableau</b></p></div>
+</div>
+</div>
+<p class="note" style="margin-top:16px"><b>Positioning:</b> Microsoft Fabric, SQL, Power BI and ETL are core portfolio capabilities. Azure Data Lake, Data Factory, Snowflake and Airflow are presented as part of my expanding data engineering toolkit rather than overstating production expertise.</p>
 </div></section>
 
-<section id="skills"><div class="wrap">
-  <div class="section-head"><div><h2>Technical toolkit</h2><p class="sub">The stack I use across analytics, reporting, data transformation and modern data platforms.</p></div></div>
-  <div class="grid2">
-    <div class="card">
-      <h3>Core analytics</h3>
-      <div class="skill"><div class="skilltop"><span>Advanced SQL</span><span>MySQL • PostgreSQL</span></div><div class="bar"><div class="fill" style="width:94%"></div></div></div>
-      <div class="skill"><div class="skilltop"><span>Power BI / DAX</span><span>BI & semantic modeling</span></div><div class="bar"><div class="fill" style="width:91%"></div></div></div>
-      <div class="skill"><div class="skilltop"><span>Excel / Power Query</span><span>Automation & MIS</span></div><div class="bar"><div class="fill" style="width:90%"></div></div></div>
-      <div class="skill"><div class="skilltop"><span>Python</span><span>Pandas • NumPy • EDA</span></div><div class="bar"><div class="fill" style="width:72%"></div></div></div>
-    </div>
-    <div class="card">
-      <h3>Data platform & integration</h3>
-      <div class="tags">
-        <span class="tag">Microsoft Fabric</span><span class="tag">OneLake</span><span class="tag">Lakehouse</span><span class="tag">Warehouse</span><span class="tag">SQL Analytics Endpoint</span><span class="tag">Direct Lake</span><span class="tag">Star Schema</span><span class="tag">Snowflake Schema</span><span class="tag">PySpark</span><span class="tag">Delta Tables</span><span class="tag">ETL</span><span class="tag">REST APIs</span><span class="tag">JSON</span><span class="tag">Power Automate</span><span class="tag">n8n</span><span class="tag">AWS S3</span><span class="tag">Azure Blob</span>
-      </div>
-    </div>
-  </div>
-</div></section>
+<section id="experience"><div class="wrap"><div class="head"><h2>Experience</h2><p class="sub">Professional experience from data operations to business data analysis and data architecture.</p></div><div class="card timeline">
+<div class="job"><span class="dot"></span><div class="date">12/2022 — Present · SAS Nagar, Mohali</div><h3>Data Architect / Business Data Analyst · Evervent Pvt Ltd</h3><p>Primary owner for data architecture, reporting, database analysis, production support, ETL and BI solutions across multiple insurance platforms.</p><p>Developed complex SQL, enterprise reporting Views, Stored Procedures, CTEs, Window Functions and JSON transformations; integrated ERP, CRM, insurer APIs and operational databases; performed RCA for quote, proposal, premium, payment and API issues.</p><p>Built reporting automation with Power BI, SQL Views, Stored Procedures and Excel; managed data validation, migration, SLA/TAT and stakeholder coordination.</p></div>
+<div class="job"><span class="dot"></span><div class="date">12/2021 — 11/2022 · Rajpura, Punjab</div><h3>Data Management Executive · M Style Sofas & Interior</h3><p>Collected, validated and analyzed production and financial datasets; developed MIS reports, interactive dashboards and automated reporting using Advanced Excel, Power Query, Pivot Tables and charts.</p></div>
+<div class="job"><span class="dot"></span><div class="date">12/2018 — 11/2021 · SAS Nagar, Mohali</div><h3>Data Operations (Team Lead) · Aerial Telecom Solution Pvt Ltd</h3><p>Led KYC data operations, SLA compliance, workload allocation, client coordination and daily operational reporting; monitored KPIs and resolved escalations.</p></div>
+</div></div></section>
 
-<section id="experience"><div class="wrap">
-  <div class="section-head"><div><h2>Experience</h2><p class="sub">From data operations to business data analysis and data architecture.</p></div></div>
-  <div class="card timeline">
-    <div class="job"><span class="dot"></span><div class="date">12/2022 — Present</div><h3>Data Architect / Business Data Analyst · Evervent Pvt Ltd</h3><p>Owned data architecture, reporting, database analysis, production support, ETL and BI solutions across multiple insurance platforms.</p><p>Built complex SQL queries, Views, Stored Procedures, CTEs, Window Functions and JSON transformations; integrated ERP, CRM, insurer APIs and operational databases; performed RCA for quote, proposal, payment and API issues.</p></div>
-    <div class="job"><span class="dot"></span><div class="date">12/2021 — 11/2022</div><h3>Data Management Executive · M Style Sofas & Interior</h3><p>Built MIS reports, interactive dashboards and automated reporting using Advanced Excel, Power Query, Pivot Tables and charts.</p></div>
-    <div class="job"><span class="dot"></span><div class="date">12/2018 — 11/2021</div><h3>Data Operations (Team Lead) · Aerial Telecom Solution Pvt Ltd</h3><p>Led KYC data operations, SLA reporting, workload allocation, client coordination, KPI monitoring and escalation management.</p></div>
-  </div>
-</div></section>
+<section id="projects"><div class="wrap"><div class="head"><h2>Featured projects</h2><p class="sub">Projects selected to demonstrate BI, advanced SQL, data engineering and embedded analytics capability.</p></div><div class="grid2">
+<article class="card project featured"><div class="num">01 / END-TO-END DATA ENGINEERING</div><h3>Microsoft Fabric Sales Analytics</h3><p>End-to-end Sales Analytics solution using Microsoft Fabric and Medallion Architecture.</p><div class="architecture"><span class="layer">Bronze</span>→<span class="layer">Silver</span>→<span class="layer">Gold</span>→<span class="layer">Warehouse</span>→<span class="layer">Direct Lake</span>→<span class="layer">Power BI</span></div><div class="casegrid"><div class="case"><strong>Engineering</strong><span>Lakehouse, Fabric Pipelines, PySpark Notebooks, Delta Tables, ingestion, cleansing, deduplication and transformation.</span></div><div class="case"><strong>Analytics</strong><span>Star Schema, Fact & Dimension modeling, SQL validation, advanced DAX for Revenue, Orders, Customers, YoY Growth and Ranking.</span></div></div><div class="tags"><span class="tag">Microsoft Fabric</span><span class="tag">OneLake</span><span class="tag">PySpark</span><span class="tag">Delta</span><span class="tag">Warehouse</span><span class="tag">Direct Lake</span><span class="tag">Power BI</span><span class="tag">DAX</span></div><div class="bottom"><a class="btn" href="https://github.com/RohitChouhanAnalyst" target="_blank" rel="noopener">GitHub ↗</a></div></article>
 
-<section id="projects"><div class="wrap">
-  <div class="section-head"><div><h2>Selected projects</h2><p class="sub">A portfolio that shows both dashboard capability and the engineering underneath it.</p></div></div>
-  <div class="grid2">
-    <article class="card project"><div class="num">01 / DATA ENGINEERING</div><h3>Microsoft Fabric Sales Analytics</h3><p>End-to-end Sales Analytics solution using Medallion Architecture, from ingestion and transformation to semantic modeling and Power BI.</p><div class="architecture"><span class="layer">Bronze</span><span class="arrow">→</span><span class="layer">Silver</span><span class="arrow">→</span><span class="layer">Gold</span><span class="arrow">→</span><span class="layer">Direct Lake</span></div><div class="tags"><span class="tag">Fabric</span><span class="tag">OneLake</span><span class="tag">PySpark</span><span class="tag">Delta</span><span class="tag">Warehouse</span><span class="tag">Power BI</span><span class="tag">DAX</span></div><div class="bottom"><a class="btn" href="https://github.com/RohitChouhanAnalyst" target="_blank" rel="noopener">GitHub profile ↗</a></div></article>
+<article class="card project"><div class="num">02 / POWER BI</div><h3>Retail Sales & Customer Analytics — Zepto Dataset</h3><p>Interactive Power BI solution covering Customer Analytics, Sales Analytics, Order Analytics and Executive KPIs.</p><ul><li>Power Query data cleaning and transformation</li><li>Data modeling and relationships</li><li>Drill-down, slicers, drill-through and trend analysis</li><li>Insights for customer behavior, product performance and revenue growth</li></ul><div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Data Modeling</span></div></article>
 
-    <article class="card project"><div class="num">02 / POWER BI</div><h3>Retail Sales & Customer Analytics — Zepto Dataset</h3><p>Interactive retail analytics covering customer, sales, order, revenue and marketing perspectives using a Kaggle dataset.</p><ul><li>Power Query cleaning and transformation</li><li>Data modeling and relationships</li><li>KPIs, slicers, drill-through and trend analysis</li><li>Business insights for retention, sales and marketing</li></ul><div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Data Modeling</span></div></article>
+<article class="card project"><div class="num">03 / ADVANCED SQL</div><h3>Enterprise Insurance Reporting & Performance Optimization</h3><p>Re-architected ERP reporting by moving complex reporting logic into optimized SQL structures.</p><ul><li>Consolidated 10+ database tables into unified reporting datasets</li><li>Views, Stored Procedures, CTEs, Window Functions and JSON processing</li><li>Automated health insurance reporting and dynamic CSV generation</li><li>One-click ERP report generation</li></ul><div class="tags"><span class="tag">MySQL</span><span class="tag">SQL Views</span><span class="tag">Stored Procedures</span><span class="tag">Optimization</span></div></article>
 
-    <article class="card project"><div class="num">03 / ADVANCED SQL</div><h3>Enterprise Insurance Reporting & Performance Optimization</h3><p>Re-architected ERP reporting by shifting complex reporting logic from the application layer into optimized SQL reporting structures.</p><ul><li>Unified 10+ database tables into reporting datasets</li><li>Views, CTEs, Window Functions and JSON processing</li><li>Stored Procedures for health insurance reporting</li><li>One-click ERP report generation</li></ul><div class="tags"><span class="tag">MySQL</span><span class="tag">SQL Views</span><span class="tag">Stored Procedures</span><span class="tag">Optimization</span></div></article>
+<article class="card project"><div class="num">04 / EMBEDDED ANALYTICS</div><h3>Employee Benefits Claims & Endorsement Analytics Portal</h3><p>Interactive Claims and Endorsement dashboards for an Employee Benefits Portal.</p><ul><li>Queried operational MongoDB data</li><li>Built business reports and dashboards in Metabase</li><li>Integrated authenticated analytics into the portal</li><li>Enabled HR KPI visibility</li></ul><div class="tags"><span class="tag">Metabase</span><span class="tag">MongoDB</span><span class="tag">Embedded Analytics</span></div></article>
 
-    <article class="card project"><div class="num">04 / EMBEDDED ANALYTICS</div><h3>Employee Benefits Claims & Endorsement Analytics</h3><p>Interactive operational analytics portal built with Metabase and MongoDB for HR-facing claims, endorsement and policy monitoring.</p><ul><li>Queried operational MongoDB data</li><li>Built centralized business dashboards</li><li>Integrated authenticated analytics into the portal</li><li>Delivered KPI visibility for HR teams</li></ul><div class="tags"><span class="tag">Metabase</span><span class="tag">MongoDB</span><span class="tag">Embedded Analytics</span></div></article>
+<article class="card project"><div class="num">05 / INSURTECH</div><h3>API Analytics, Production Support & RCA</h3><p>Production analytics across quote generation, proposal processing, payment validation, policy issuance and third-party insurer integrations.</p><ul><li>Analyzed application logs, SQL data and business workflows</li><li>Validated REST APIs and JSON payloads</li><li>Performed RCA for production incidents and integration defects</li><li>Collaborated with product, development, QA, business and insurer teams</li></ul><div class="tags"><span class="tag">REST API</span><span class="tag">JSON</span><span class="tag">SQL</span><span class="tag">RCA</span><span class="tag">InsurTech</span></div></article>
+</div></div></section>
 
-    <article class="card project"><div class="num">05 / INSURTECH</div><h3>Insurance Operations, API Analytics & RCA</h3><p>Production analytics work across quote generation, proposal processing, payment validation, policy issuance and third-party insurer integrations.</p><ul><li>Analyzed application logs, SQL data and business workflows</li><li>Performed RCA for integration and transaction failures</li><li>Validated REST APIs and JSON payloads</li><li>Worked with product, development, QA and insurer teams</li></ul><div class="tags"><span class="tag">REST API</span><span class="tag">JSON</span><span class="tag">SQL</span><span class="tag">RCA</span><span class="tag">InsurTech</span></div></article>
+<section id="certifications"><div class="wrap"><div class="head"><h2>Certifications & assessments</h2><p class="sub">Credentials listed in the current CV.</p></div><div class="grid3"><div class="card cert"><h3>Microsoft Power BI</h3><p>Simplilearn</p></div><div class="card cert"><h3>SQL (Advanced)</h3><p>HackerRank</p></div><div class="card cert"><h3>SQL Assessment</h3><p>TestDome</p></div></div></div></section>
 
-    <article class="card project"><div class="num">06 / AUTOMATION</div><h3>Reporting & Workflow Automation</h3><p>Automation-focused work using SQL, Power BI, Excel, Power Automate and n8n to reduce manual reporting and operational effort.</p><ul><li>Automated reporting datasets and recurring reports</li><li>SQL-driven operational reporting</li><li>Workflow automation and AI-assisted development</li><li>Focus on repeatability, validation and business usability</li></ul><div class="tags"><span class="tag">Power BI</span><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Power Automate</span><span class="tag">n8n</span></div></article>
-  </div>
-</div></section>
+<section><div class="wrap"><div class="card" style="border-color:rgba(99,179,255,.25);background:linear-gradient(135deg,rgba(99,179,255,.08),rgba(139,124,255,.07));display:flex;justify-content:space-between;gap:25px;align-items:center"><div><h2 style="font-size:26px">Building toward modern data engineering.</h2><p class="sub">SQL → BI → ETL → Microsoft Fabric → OneLake → Lakehouse → PySpark → Delta → Warehouse → Semantic Models → Direct Lake.</p></div><a class="btn primary" href="#contact">Let's connect →</a></div></div></section>
 
-<section><div class="wrap">
-  <div class="callout"><div><h2 style="font-size:26px">Currently building deeper expertise in Microsoft Fabric.</h2><p class="sub">OneLake → Lakehouse → PySpark → Delta → Warehouse → Semantic Model → Direct Lake → Power BI.</p></div><a class="btn primary" href="#contact">Work with me →</a></div>
-</div></section>
-
-<section id="contact"><div class="wrap">
-  <div class="section-head"><div><h2>Let's build something useful.</h2><p class="sub">For Data Analyst, BI Analyst, Power BI, Analytics or data engineering opportunities, feel free to connect.</p></div></div>
-  <div class="grid3">
-    <a class="card" href="mailto:rck6977@gmail.com"><h3>Email</h3><p>rck6977@gmail.com</p></a>
-    <a class="card" href="https://github.com/RohitChouhanAnalyst" target="_blank" rel="noopener"><h3>GitHub</h3><p>RohitChouhanAnalyst ↗</p></a>
-    <a class="card" href="https://www.linkedin.com/in/rohitchouhananalyst/" target="_blank" rel="noopener"><h3>LinkedIn</h3><p>Connect professionally ↗</p></a>
-  </div>
-</div></section>
+<section id="contact"><div class="wrap"><div class="head"><h2>Let's connect</h2><p class="sub">For Data Analyst, BI, Power BI, Business Analytics or data engineering opportunities.</p></div><div class="grid2">
+<div class="card contact"><div><strong>Mobile</strong><span>+91 73559 87689</span></div><a class="btn" href="tel:+917355987689">Call me</a></div><div class="card contact"><div><strong>Primary email</strong><span>rohitchouhan.analyst@gmail.com</span></div><a class="btn primary" href="mailto:rohitchouhan.analyst@gmail.com?cc=rck6977@gmail.com&subject=Portfolio%20Contact%20%E2%80%94%20Rohit%20Chouhan">Email me</a></div>
+<div class="card contact"><div><strong>Secondary email</strong><span>rck6977@gmail.com</span></div><a class="btn" href="mailto:rck6977@gmail.com?cc=rohitchouhan.analyst@gmail.com&subject=Portfolio%20Contact%20%E2%80%94%20Rohit%20Chouhan">Email secondary</a></div>
+<div class="card contact"><div><strong>LinkedIn</strong><span>Rohit Chouhan · LinkedIn</span></div><a class="btn" href="https://www.linkedin.com/in/rohitchouhananalyst/" target="_blank" rel="noopener">View LinkedIn ↗</a></div>
+<div class="card contact"><div><strong>GitHub</strong><span>RohitChouhanAnalyst</span></div><a class="btn" href="https://github.com/RohitChouhanAnalyst" target="_blank" rel="noopener">View GitHub ↗</a></div>
+</div><p class="note">Portfolio content is based on professional information from the current CV. No confidential company data, credentials or customer information is published.</p></div></section>
 </main>
-
-<footer><div class="wrap footerin"><span>© 2026 Rohit Chouhan. Built for data, analytics & engineering.</span><span>SQL • Power BI • Fabric • ETL • APIs</span></div></footer>
+<footer><div class="wrap foot"><span>© 2026 Rohit Chouhan. Data Analytics • BI • Microsoft Fabric.</span><span>SQL • Power BI • DAX • ETL • APIs</span></div></footer>
+<script>
+const m=document.getElementById('menu'),l=document.getElementById('links');
+m.onclick=()=>{l.classList.toggle('open');m.setAttribute('aria-expanded',l.classList.contains('open'))};
+l.querySelectorAll('a').forEach(a=>a.onclick=()=>l.classList.remove('open'));
+</script>
 </body>
 </html>
