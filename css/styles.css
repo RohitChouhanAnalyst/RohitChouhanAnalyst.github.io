@@ -929,6 +929,46 @@ button {
   padding-top: 1.15rem;
 }
 
+.dashboard-embed {
+  margin-top: 1.25rem;
+  min-width: 0;
+}
+
+.dashboard-embed-head h4 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.dashboard-embed-head p {
+  margin: 0 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.dashboard-frame {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(253, 191, 5, 0.28);
+  background: rgba(0, 0, 0, 0.22);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(253, 191, 5, 0.08);
+  overflow: hidden;
+}
+
+.dashboard-frame iframe {
+  display: block;
+  width: 100%;
+  height: 800px;
+  border: 0;
+  background: #010018;
+}
+
 .case-study {
   margin-top: 1.25rem;
   padding: 1.25rem;
@@ -1231,7 +1271,9 @@ button {
 .case-grid > *,
 .card,
 .project,
-.case-study {
+.case-study,
+.dashboard-embed,
+.dashboard-frame {
   min-width: 0;
 }
 
@@ -1271,6 +1313,10 @@ button {
 
   .section {
     padding: 3.25rem 0;
+  }
+
+  .dashboard-frame iframe {
+    height: 680px;
   }
 }
 
@@ -1434,6 +1480,10 @@ button {
 
   .case-study {
     padding: 1rem;
+  }
+
+  .dashboard-frame iframe {
+    height: 520px;
   }
 
   .job {
