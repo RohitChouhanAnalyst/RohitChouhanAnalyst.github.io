@@ -148,10 +148,6 @@ button {
   border: 2px solid #fff;
 }
 
-.brand > span:not(.brand-mark) {
-  color: var(--accent);
-}
-
 .nav-links {
   display: flex;
   align-items: center;
@@ -385,7 +381,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.2rem 0.35rem;
+  gap: 0.2rem 0;
   margin: 0.1rem 0 0;
   max-width: 38rem;
   color: var(--muted);
@@ -399,6 +395,8 @@ button {
 .hero-stack .stack-sep {
   color: rgba(168, 180, 210, 0.55);
   font-weight: 400;
+  padding-inline: 0.45em;
+  white-space: nowrap;
 }
 
 .hero-lead {
@@ -1153,7 +1151,7 @@ button {
 .dashboard-frame iframe {
   display: block;
   width: 100%;
-  height: 800px;
+  height: 500px;
   border: 0;
   background: #010018;
 }
@@ -1495,29 +1493,29 @@ button {
   .hero-card {
     width: 100%;
     max-width: 240px;
-    margin: 0.2rem auto 0.05rem;
+    margin: 0.15rem auto 0;
     order: 0;
   }
 
   .hero-card .portrait {
-    --portrait-size: 230px;
+    --portrait-size: 200px;
     --portrait-white: 6px;
-    margin: 0 auto 0.4rem;
+    margin: 0 auto 0.25rem;
   }
 
   .hero-identity {
-    margin-top: 0.3rem;
-    padding-top: 0.55rem;
+    margin-top: 0.2rem;
+    padding-top: 0.4rem;
     max-width: 22rem;
   }
 
   .hero-identity strong {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
   }
 
   .hero-focus-line {
-    margin-top: 0.3rem;
-    font-size: 0.82rem;
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
   }
 
   .hero-tagline {
@@ -1526,7 +1524,8 @@ button {
 
   .hero-stack {
     font-size: 0.75rem;
-    gap: 0.15rem 0.3rem;
+    gap: 0.15rem 0;
+    max-width: 100%;
   }
 
   .hero-lead {
@@ -1538,7 +1537,7 @@ button {
   }
 
   .hero-actions {
-    margin: 0.35rem 0 0.1rem;
+    margin: 0.25rem 0 0.1rem;
   }
 
   .hero-meta {
@@ -1585,9 +1584,51 @@ button {
 }
 
 @media (max-width: 480px) {
+  .hero-card .portrait {
+    --portrait-size: 128px;
+  }
+
+  .hero-inner {
+    row-gap: 0.32rem;
+  }
+
   .hero-stack {
     font-size: 12.5px;
-    gap: 0.12rem 0.28rem;
+    gap: 0.12rem 0;
+  }
+
+  .hero-identity {
+    padding-top: 0.28rem;
+  }
+
+  .hero-identity strong {
+    font-size: 0.88rem;
+  }
+
+  .hero-focus-line {
+    font-size: 0.76rem;
+    line-height: 1.3;
+    margin-top: 0.15rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .hero-lead {
+    font-size: 0.84rem;
+    line-height: 1.35;
+  }
+
+  .hero-actions {
+    margin-top: 0.15rem;
+  }
+
+  .hero-actions .btn {
+    min-height: 42px;
+    padding-block: 0.55rem;
+    font-size: 0.82rem;
   }
 }
 
@@ -1709,7 +1750,7 @@ button {
   }
 
   .hero-actions {
-    gap: 0.6rem;
+    gap: 0.5rem;
   }
 
   .hero-actions .btn,
@@ -1720,7 +1761,7 @@ button {
   }
 
   .portrait {
-    --portrait-size: 230px;
+    --portrait-size: 200px;
     --portrait-white: 6px;
   }
 
