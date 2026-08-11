@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=20260811-skills-tabs">
+  <link rel="stylesheet" href="css/styles.css?v=20260811-de-flow-wrap">
 
   <script type="application/ld+json">
   {
@@ -637,19 +637,33 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
 
         <div class="pipeline reveal">
           <div class="pipeline-flow" role="list" aria-label="Modern data pipeline stages">
-            <span class="pipeline-node" role="listitem">Data Sources</span>
-            <span class="pipeline-arrow" aria-hidden="true">→</span>
-            <span class="pipeline-node" role="listitem">Ingestion</span>
-            <span class="pipeline-arrow" aria-hidden="true">→</span>
-            <span class="pipeline-node" role="listitem">Storage</span>
-            <span class="pipeline-arrow" aria-hidden="true">→</span>
-            <span class="pipeline-node" role="listitem">Transformation</span>
-            <span class="pipeline-arrow" aria-hidden="true">→</span>
-            <span class="pipeline-node" role="listitem">Warehouse / Lakehouse</span>
-            <span class="pipeline-arrow" aria-hidden="true">→</span>
-            <span class="pipeline-node" role="listitem">Semantic Model</span>
-            <span class="pipeline-arrow" aria-hidden="true">→</span>
-            <span class="pipeline-node" role="listitem">BI / Analytics</span>
+            <span class="pipeline-step">
+              <span class="pipeline-node" role="listitem">Data Sources</span>
+              <span class="pipeline-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="pipeline-step">
+              <span class="pipeline-node" role="listitem">Ingestion</span>
+              <span class="pipeline-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="pipeline-step">
+              <span class="pipeline-node" role="listitem">Storage</span>
+              <span class="pipeline-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="pipeline-step">
+              <span class="pipeline-node" role="listitem">Transformation</span>
+              <span class="pipeline-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="pipeline-step">
+              <span class="pipeline-node" role="listitem">Warehouse / Lakehouse</span>
+              <span class="pipeline-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="pipeline-step">
+              <span class="pipeline-node" role="listitem">Semantic Model</span>
+              <span class="pipeline-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="pipeline-step pipeline-step--last">
+              <span class="pipeline-node" role="listitem">BI / Analytics</span>
+            </span>
           </div>
         </div>
 
@@ -901,6 +915,6 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260811-skills-tabs" defer></script>
+  <script src="js/main.js?v=20260811-de-flow-wrap" defer></script>
 </body>
 </html>

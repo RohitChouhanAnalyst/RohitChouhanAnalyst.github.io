@@ -289,6 +289,32 @@
 
   mountPowerBiEmbeds();
 
+  // Data Engineering pipeline: hide arrows that bridge a wrapped row on narrow screens
+  const pipelineFlow = document.querySelector("#data-engineering .pipeline-flow");
+  if (pipelineFlow) {
+    const syncPipelineWrapArrows = () => {
+      const steps = Array.from(pipelineFlow.querySelectorAll(".pipeline-step"));
+      steps.forEach((step, index) => {
+        const arrow = step.querySelector(".pipeline-arrow");
+        if (!arrow) return;
+        const next = steps[index + 1];
+        if (!next) {
+          arrow.hidden = true;
+          return;
+        }
+        const sameRow =
+          Math.abs(step.getBoundingClientRect().top - next.getBoundingClientRect().top) < 4;
+        arrow.hidden = !sameRow;
+      });
+    };
+
+    syncPipelineWrapArrows();
+    window.addEventListener("resize", syncPipelineWrapArrows, { passive: true });
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(syncPipelineWrapArrows).observe(pipelineFlow);
+    }
+  }
+
   // Skills section: accessible tabbed category explorer (all panels remain in DOM)
   const skillsExplorer = document.querySelector(".skills-explorer");
   if (skillsExplorer) {
