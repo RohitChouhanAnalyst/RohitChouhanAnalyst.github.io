@@ -231,19 +231,48 @@
     btn.setAttribute("download", "Rohit_Chouhan_Resume.pdf");
   });
 
-  // Configurable Power BI embeds via data-powerbi-embed-url (POWER_BI_EMBED_URL)
+  // Configurable Power BI embeds.
+  // Set POWER_BI_EMBED_URL to a published Power BI Service / Fabric report embed URL when available.
+  // Do not use a .pbix file path — PBIX is not browser-renderable.
+  const POWER_BI_EMBED_URL = "";
+
   const mountPowerBiEmbeds = () => {
     document.querySelectorAll(".js-powerbi-embed").forEach((host) => {
-      const url = (host.getAttribute("data-powerbi-embed-url") || "").trim();
-      if (!url) return;
-
+      const url = (
+        host.getAttribute("data-powerbi-embed-url") ||
+        POWER_BI_EMBED_URL ||
+        ""
+      ).trim();
+      const openBtn = host.querySelector(".js-powerbi-open");
+      const frame = host.querySelector(".powerbi-frame");
       const title =
         host.getAttribute("data-title") || "Live Interactive Power BI Dashboard";
-      const frame = host.querySelector(".powerbi-frame");
-      const placeholderCopy = host.querySelector(".powerbi-placeholder-copy");
-      if (!frame) return;
+
+      if (openBtn) {
+        if (url) {
+          openBtn.classList.remove("is-disabled");
+          openBtn.removeAttribute("aria-disabled");
+          openBtn.removeAttribute("tabindex");
+          openBtn.setAttribute("href", url);
+          openBtn.setAttribute("target", "_blank");
+          openBtn.setAttribute("rel", "noopener noreferrer");
+        } else {
+          openBtn.classList.add("is-disabled");
+          openBtn.setAttribute("aria-disabled", "true");
+          openBtn.setAttribute("tabindex", "-1");
+          openBtn.setAttribute("href", "#");
+          openBtn.removeAttribute("target");
+          openBtn.removeAttribute("rel");
+          openBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+          });
+        }
+      }
+
+      if (!url || !frame) return;
 
       frame.classList.remove("powerbi-placeholder");
+      frame.classList.remove("powerbi-preview");
       frame.removeAttribute("role");
       frame.removeAttribute("aria-label");
       frame.innerHTML = "";
@@ -255,11 +284,6 @@
       iframe.allowFullscreen = true;
       iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
       frame.appendChild(iframe);
-
-      if (placeholderCopy) {
-        placeholderCopy.textContent =
-          "Explore the dashboard interactively using filters, charts, and report pages.";
-      }
     });
   };
 
