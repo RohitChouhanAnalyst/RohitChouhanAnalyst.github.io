@@ -1602,21 +1602,82 @@ button {
 }
 
 @media (max-width: 480px) {
-  .hero-card .portrait {
-    --portrait-size: 128px;
+  .hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 90px;
+    column-gap: 0.7rem;
+    row-gap: 0.32rem;
+    align-items: start;
+    grid-template-areas:
+      "pill pill"
+      "title photo"
+      "identity identity"
+      "tagline tagline"
+      "lead lead"
+      "actions actions"
+      "meta meta";
   }
 
-  .hero-inner {
-    row-gap: 0.32rem;
+  .hero-pill {
+    grid-area: pill;
+  }
+
+  .hero h1 {
+    grid-area: title;
+    align-self: center;
+    min-width: 0;
+    margin: 0;
+    font-size: clamp(1.8rem, 8.8vw, 2.25rem);
+    line-height: 1.02;
+  }
+
+  .hero-card {
+    display: contents;
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  .hero-card .portrait,
+  .hero .portrait {
+    grid-area: photo;
+    --portrait-size: 90px;
+    --portrait-white: 4px;
+    width: 90px;
+    max-width: 90px;
+    margin: 0;
+    align-self: center;
+    justify-self: end;
+    flex-shrink: 0;
+  }
+
+  .hero-identity {
+    grid-area: identity;
+    margin-top: 0.35rem;
+    padding-top: 0.35rem;
+    max-width: none;
+    width: 100%;
+  }
+
+  .hero-tagline {
+    grid-area: tagline;
+  }
+
+  .hero-lead {
+    grid-area: lead;
+  }
+
+  .hero-actions {
+    grid-area: actions;
+  }
+
+  .hero-meta {
+    grid-area: meta;
   }
 
   .hero-stack {
     font-size: 12.5px;
     gap: 0.12rem 0;
-  }
-
-  .hero-identity {
-    padding-top: 0.28rem;
   }
 
   .hero-identity strong {
@@ -1647,6 +1708,12 @@ button {
     min-height: 42px;
     padding-block: 0.55rem;
     font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 1.7rem;
   }
 }
 
