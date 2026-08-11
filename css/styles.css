@@ -476,7 +476,7 @@ button {
 
 .hero-identity {
   margin: 1.15rem auto 0;
-  max-width: 26rem;
+  max-width: 22rem;
   padding: 1.05rem 0.35rem 0;
   border-top: 1px solid rgba(253, 191, 5, 0.3);
   text-align: center;
@@ -487,16 +487,16 @@ button {
   font-family: var(--font-display);
   font-size: 1.08rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text);
+  letter-spacing: 0.08em;
+  color: var(--accent);
 }
 
 .hero-focus-line {
-  margin: 0.7rem 0 0;
+  margin: 0.45rem 0 0;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.45;
   text-wrap: balance;
 }
 
@@ -1416,6 +1416,30 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .hero-inner {
+    gap: 1.35rem;
+  }
+
+  .hero-card {
+    order: -1;
+    width: 100%;
+    max-width: 300px;
+    margin-inline: auto;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+
+  .hero-card .portrait {
+    margin: 0.15rem auto 0.65rem;
+  }
+
+  .hero-identity {
+    margin-top: 0.65rem;
+    padding-top: 0.85rem;
+  }
+
   .project-grid,
   .grid-2,
   .grid-3,
@@ -1430,13 +1454,9 @@ button {
 
   .hero {
     min-height: auto;
-    padding-top: 2rem;
-  }
-
-  .hero-card {
-    width: 100%;
-    max-width: 360px;
-    margin-inline: auto;
+    padding-top: 1.35rem;
+    padding-bottom: 2.25rem;
+    align-items: flex-start;
   }
 
   .scroll-cue {
@@ -1564,6 +1584,7 @@ button {
   .hero h1 {
     font-size: clamp(2.15rem, 11vw, 2.85rem);
     line-height: 1.02;
+    margin-top: 0.85rem;
   }
 
   .hero-tagline {
