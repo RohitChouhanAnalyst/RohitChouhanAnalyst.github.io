@@ -159,7 +159,7 @@ button {
   color: var(--text-soft);
   font-size: 0.92rem;
   font-weight: 500;
-  transition: color 0.2s var(--ease);
+  transition: color 0.2s var(--ease), transform 100ms ease;
 }
 
 .nav-links a:hover {
@@ -243,6 +243,15 @@ button {
   transform: translateY(-1px);
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.nav-links a:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+.btn:active:not([aria-disabled="true"]):not(.is-disabled) {
+  transform: translateY(1px) scale(0.97);
+  transition-duration: 100ms;
 }
 
 .btn-primary {
@@ -1856,6 +1865,53 @@ button {
   .pill {
     font-size: 0.7rem;
     padding: 0.4rem 0.85rem;
+  }
+}
+
+/* ---------- Restrained interaction (projects, portrait, press) ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  @media (hover: hover) and (pointer: fine) {
+    .card.project {
+      transition:
+        border-color 0.25s var(--ease),
+        transform 200ms ease,
+        background 0.25s var(--ease),
+        box-shadow 200ms ease;
+    }
+
+    .card.project:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+    }
+
+    .portrait {
+      perspective: 600px;
+    }
+
+    .portrait-frame {
+      transform-style: preserve-3d;
+      transition: transform 300ms ease;
+    }
+
+    .portrait:hover .portrait-frame {
+      transform: rotateY(8deg) rotateX(-4deg);
+    }
+  }
+
+  @media (hover: none) {
+    .card.project {
+      transition: transform 150ms ease, border-color 0.25s var(--ease), background 0.25s var(--ease);
+    }
+
+    .card.project:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .card.project:active {
+      transform: scale(0.98);
+    }
   }
 }
 
