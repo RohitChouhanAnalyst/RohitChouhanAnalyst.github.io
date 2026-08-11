@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=20260811-hero-line">
+  <link rel="stylesheet" href="css/styles.css?v=20260811-hero-lifecycle">
 
   <script type="application/ld+json">
   {
@@ -160,21 +160,31 @@
             </div>
           </div>
           <div class="hero-identity">
-            <div class="hero-identity-desktop">
-              <p class="hero-focus-line">
-                Data Engineer | SQL | Power BI | Microsoft Fabric | Python | Excel | ETL | Dashboard Development | Business Intelligence | InsurTech | RCA | n8n Automation
-              </p>
-            </div>
-            <div class="hero-identity-mobile">
-              <strong>Data Analyst</strong>
-              <p class="hero-focus-line">Business Intelligence • Data Analytics</p>
-            </div>
+            <strong>Data Analyst</strong>
+            <p class="hero-focus-line">Business Intelligence • Data Analytics</p>
           </div>
         </aside>
 
         <p class="hero-tagline">
-          I turn business <span class="hl">data</span> into <span class="hl">decisions</span>
+          I build end-to-end data solutions that turn raw data into reliable, decision-ready insights.
         </p>
+        <p class="hero-stack" aria-label="Core technology stack">
+          SQL • Python • Power BI / DAX • Microsoft Fabric • Azure Data Factory • dbt • PySpark • n8n
+        </p>
+
+        <div class="hero-lifecycle" aria-label="End-to-end data lifecycle">
+          <ol class="lifecycle-flow">
+            <li><span>Raw Data</span></li>
+            <li><span>Ingestion</span></li>
+            <li><span>Transformation</span></li>
+            <li><span>Orchestration</span></li>
+            <li><span>Lakehouse / Warehouse</span></li>
+            <li><span>Data Quality &amp; Governance</span></li>
+            <li><span>Data Modeling</span></li>
+            <li><span>BI / AI Automation</span></li>
+          </ol>
+        </div>
+
         <p class="hero-lead">
           Business Data Analyst with 4+ years of relevant experience across SQL, Power BI, ETL, API analytics, and InsurTech operations — building reporting, data architecture, and modern analytics solutions.
         </p>
@@ -544,10 +554,13 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
               <span class="chip">Star / Snowflake schema</span>
               <span class="chip chip-core">Fabric Pipelines</span>
               <span class="chip chip-core">PySpark</span>
+              <span class="chip chip-core">dbt</span>
               <span class="chip">Delta Tables</span>
               <span class="chip chip-core">ETL</span>
               <span class="chip">Data transformation</span>
               <span class="chip">Data validation</span>
+              <span class="chip">Data Quality</span>
+              <span class="chip">Data Governance</span>
               <span class="chip">Fact &amp; Dimension modeling</span>
             </div>
           </article>
@@ -568,7 +581,7 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
             <h3>Cloud &amp; Data Platforms</h3>
             <div class="chip-row">
               <span class="chip">Azure Data Lake (ADLS Gen2)</span>
-              <span class="chip">Azure Data Factory</span>
+              <span class="chip chip-core">Azure Data Factory</span>
               <span class="chip">Azure Blob Storage</span>
               <span class="chip">AWS S3</span>
               <span class="chip">Apache Airflow</span>
@@ -640,7 +653,7 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
 
           <article class="card cap-card reveal">
             <h3>Pipelines &amp; transformation</h3>
-            <p>Using Fabric Pipelines and PySpark notebooks for ingestion, cleansing, deduplication, and transformation so datasets are validation-ready for analytics.</p>
+            <p>Using Fabric Pipelines, Azure Data Factory, and PySpark notebooks for ingestion, cleansing, deduplication, and transformation — with data validation and quality checks so datasets are analytics-ready.</p>
           </article>
 
           <article class="card cap-card reveal">

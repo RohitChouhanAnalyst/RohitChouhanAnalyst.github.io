@@ -307,6 +307,8 @@ button {
     "pill card"
     "title card"
     "tagline card"
+    "stack card"
+    "flow card"
     "lead card"
     "actions card"
     "meta card";
@@ -367,14 +369,79 @@ button {
 .hero-tagline {
   grid-area: tagline;
   margin: 0;
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  max-width: 38rem;
+  font-size: clamp(1.02rem, 1.9vw, 1.22rem);
   font-weight: 500;
+  line-height: 1.45;
   color: var(--text-soft);
+}
+
+.hero-stack {
+  grid-area: stack;
+  margin: 0.15rem 0 0;
+  max-width: 38rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+}
+
+.hero-lifecycle {
+  grid-area: flow;
+  margin: 0.35rem 0 0;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.lifecycle-flow {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0.7rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(253, 191, 5, 0.28);
+  background:
+    linear-gradient(135deg, rgba(253, 191, 5, 0.06), transparent 55%),
+    rgba(0, 0, 0, 0.22);
+}
+
+.lifecycle-flow li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lifecycle-flow li:not(:last-child)::after {
+  content: "→";
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.lifecycle-flow span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(253, 191, 5, 0.35);
+  background: rgba(253, 191, 5, 0.08);
+  color: var(--text-soft);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hero-lead {
   grid-area: lead;
-  margin: 0.15rem 0 0;
+  margin: 0.35rem 0 0;
   max-width: 36rem;
   color: var(--muted);
   font-size: 1rem;
@@ -497,18 +564,10 @@ button {
 
 .hero-identity {
   margin: 1.15rem auto 0;
-  max-width: 26rem;
+  max-width: 22rem;
   padding: 1.05rem 0.35rem 0;
   border-top: 1px solid rgba(253, 191, 5, 0.3);
   text-align: center;
-}
-
-.hero-identity-mobile {
-  display: none;
-}
-
-.hero-identity-desktop .hero-focus-line {
-  margin: 0;
 }
 
 .hero-identity strong {
@@ -525,7 +584,7 @@ button {
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.45;
   text-wrap: balance;
 }
 
@@ -1455,6 +1514,8 @@ button {
   .hero h1,
   .hero-card,
   .hero-tagline,
+  .hero-stack,
+  .hero-lifecycle,
   .hero-lead,
   .hero-actions,
   .hero-meta {
@@ -1463,12 +1524,14 @@ button {
 
   .hero-card {
     width: 100%;
-    max-width: 280px;
+    max-width: 240px;
     margin: 0.35rem auto 0.15rem;
     order: 0;
   }
 
   .hero-card .portrait {
+    --portrait-size: 230px;
+    --portrait-white: 6px;
     margin: 0 auto 0.55rem;
   }
 
@@ -1478,12 +1541,17 @@ button {
     max-width: 22rem;
   }
 
-  .hero-identity-desktop {
-    display: none;
+  .hero-stack {
+    font-size: 0.74rem;
   }
 
-  .hero-identity-mobile {
-    display: block;
+  .lifecycle-flow {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    max-width: 100%;
+    padding-bottom: 0.55rem;
   }
 
   .hero h1 {
@@ -1661,7 +1729,7 @@ button {
   }
 
   .portrait {
-    --portrait-size: min(260px, 78vw);
+    --portrait-size: 230px;
     --portrait-white: 6px;
   }
 
