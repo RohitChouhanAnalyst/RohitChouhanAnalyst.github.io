@@ -874,6 +874,14 @@ button {
   overflow-x: auto;
 }
 
+.pipeline-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
 .pipeline-node {
   flex: 0 0 auto;
   padding: 0.65rem 0.9rem;
@@ -886,9 +894,8 @@ button {
   white-space: nowrap;
 }
 
-.pipeline-arrow {
-  color: var(--accent);
-  font-weight: 700;
+.pipeline-arrow[hidden] {
+  display: none;
 }
 
 .capability-grid {
@@ -2001,10 +2008,16 @@ button {
   }
 
   .pipeline-flow {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    overflow-x: visible;
     padding: 0.95rem;
-    padding-bottom: 0.85rem;
-    -webkit-overflow-scrolling: touch;
+    row-gap: 0.55rem;
+    column-gap: 0.45rem;
+  }
+
+  .pipeline-node {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.72rem;
   }
 
   .chip {
