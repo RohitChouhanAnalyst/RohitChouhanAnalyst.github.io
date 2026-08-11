@@ -308,7 +308,6 @@ button {
     "pill card"
     "title card"
     "tagline card"
-    "stack card"
     "lead card"
     "actions card"
     "meta card";
@@ -377,19 +376,26 @@ button {
 }
 
 .hero-stack {
-  grid-area: stack;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.2rem 0;
-  margin: 0.1rem 0 0;
-  max-width: 38rem;
+  margin: 0.55rem auto 0;
+  max-width: 100%;
   color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 1.45;
   letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.hero-stack .stack-chunk {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .hero-stack .stack-sep {
@@ -1483,7 +1489,6 @@ button {
   .hero h1,
   .hero-card,
   .hero-tagline,
-  .hero-stack,
   .hero-lead,
   .hero-actions,
   .hero-meta {
