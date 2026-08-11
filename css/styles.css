@@ -982,7 +982,9 @@ button {
 .powerbi-placeholder {
   display: grid;
   place-items: center;
-  min-height: 280px;
+  gap: 0.55rem;
+  min-height: 420px;
+  height: min(72vh, 800px);
   padding: 2rem 1.25rem;
   text-align: center;
   background:
@@ -997,12 +999,42 @@ button {
     rgba(0, 0, 0, 0.28);
 }
 
+.powerbi-preview {
+  height: auto;
+  min-height: 0;
+  background: #07071a;
+}
+
+.powerbi-preview img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.powerbi-placeholder-title {
+  display: block;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
 .powerbi-placeholder p,
 .powerbi-placeholder-copy {
   margin: 0;
-  max-width: 36ch;
+  max-width: 40ch;
   color: var(--muted);
   font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.powerbi-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.95rem;
 }
 
 .ai-panel {
@@ -1419,6 +1451,11 @@ button {
   .powerbi-frame iframe {
     height: 680px;
   }
+
+  .powerbi-placeholder {
+    height: min(62vh, 680px);
+    min-height: 360px;
+  }
 }
 
 @media (max-width: 860px) {
@@ -1586,6 +1623,11 @@ button {
   .dashboard-frame iframe,
   .powerbi-frame iframe {
     height: 520px;
+  }
+
+  .powerbi-placeholder {
+    height: min(58vh, 520px);
+    min-height: 300px;
   }
 
   .job {
