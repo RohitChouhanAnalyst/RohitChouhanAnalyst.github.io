@@ -392,6 +392,10 @@ button {
   text-align: center;
 }
 
+.hero-identity .hero-stack {
+  font-size: calc(0.8rem - 2px);
+}
+
 .hero-stack .stack-chunk {
   display: inline-flex;
   align-items: center;
