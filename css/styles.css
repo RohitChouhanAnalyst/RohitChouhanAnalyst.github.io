@@ -166,9 +166,14 @@ button {
   transition: color 0.2s var(--ease);
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+  color: var(--text);
+}
+
 .nav-links a[aria-current="true"] {
-  color: var(--accent);
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: inset 0 -2px 0 rgba(238, 245, 243, 0.85);
 }
 
 .nav-toggle {
@@ -308,12 +313,11 @@ button {
     "title card"
     "tagline card"
     "stack card"
-    "flow card"
     "lead card"
     "actions card"
     "meta card";
   column-gap: clamp(2rem, 5vw, 4rem);
-  row-gap: 0.55rem;
+  row-gap: 0.4rem;
   align-items: start;
   overflow: visible;
 }
@@ -370,89 +374,48 @@ button {
   grid-area: tagline;
   margin: 0;
   max-width: 38rem;
-  font-size: clamp(1.02rem, 1.9vw, 1.22rem);
+  font-size: clamp(0.98rem, 1.7vw, 1.15rem);
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.4;
   color: var(--text-soft);
 }
 
 .hero-stack {
   grid-area: stack;
-  margin: 0.15rem 0 0;
-  max-width: 38rem;
-  color: var(--accent);
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  line-height: 1.55;
-  letter-spacing: 0.02em;
-}
-
-.hero-lifecycle {
-  grid-area: flow;
-  margin: 0.35rem 0 0;
-  min-width: 0;
-  max-width: 100%;
-}
-
-.lifecycle-flow {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.4rem;
-  margin: 0;
-  padding: 0.7rem 0.75rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(253, 191, 5, 0.28);
-  background:
-    linear-gradient(135deg, rgba(253, 191, 5, 0.06), transparent 55%),
-    rgba(0, 0, 0, 0.22);
+  gap: 0.2rem 0.35rem;
+  margin: 0.1rem 0 0;
+  max-width: 38rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
 }
 
-.lifecycle-flow li {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.lifecycle-flow li:not(:last-child)::after {
-  content: "→";
-  color: var(--accent);
-  font-size: 0.78rem;
-  font-weight: 700;
-  opacity: 0.85;
-}
-
-.lifecycle-flow span {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.32rem 0.55rem;
-  border-radius: 999px;
-  border: 1px solid rgba(253, 191, 5, 0.35);
-  background: rgba(253, 191, 5, 0.08);
-  color: var(--text-soft);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  white-space: nowrap;
+.hero-stack .stack-sep {
+  color: rgba(168, 180, 210, 0.55);
+  font-weight: 400;
 }
 
 .hero-lead {
   grid-area: lead;
-  margin: 0.35rem 0 0;
+  margin: 0.2rem 0 0;
   max-width: 36rem;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
 
 .hero-actions {
   grid-area: actions;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 0.85rem 0 0.35rem;
+  gap: 0.65rem;
+  margin: 0.55rem 0 0.2rem;
 }
 
 .hero-meta {
@@ -570,13 +533,21 @@ button {
   text-align: center;
 }
 
+.hero-pill.pill {
+  border-color: rgba(238, 245, 243, 0.35);
+}
+
+.hero-pill .pill-accent {
+  color: var(--text);
+}
+
 .hero-identity strong {
   display: block;
   font-family: var(--font-display);
   font-size: 1.08rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  color: var(--text);
 }
 
 .hero-focus-line {
@@ -1506,8 +1477,8 @@ button {
 
   .hero-inner {
     grid-template-areas: none;
-    gap: 0.75rem;
-    row-gap: 0.75rem;
+    gap: 0.45rem;
+    row-gap: 0.45rem;
   }
 
   .hero-pill,
@@ -1515,7 +1486,6 @@ button {
   .hero-card,
   .hero-tagline,
   .hero-stack,
-  .hero-lifecycle,
   .hero-lead,
   .hero-actions,
   .hero-meta {
@@ -1525,41 +1495,55 @@ button {
   .hero-card {
     width: 100%;
     max-width: 240px;
-    margin: 0.35rem auto 0.15rem;
+    margin: 0.2rem auto 0.05rem;
     order: 0;
   }
 
   .hero-card .portrait {
     --portrait-size: 230px;
     --portrait-white: 6px;
-    margin: 0 auto 0.55rem;
+    margin: 0 auto 0.4rem;
   }
 
   .hero-identity {
-    margin-top: 0.45rem;
-    padding-top: 0.75rem;
+    margin-top: 0.3rem;
+    padding-top: 0.55rem;
     max-width: 22rem;
   }
 
-  .hero-stack {
-    font-size: 0.74rem;
+  .hero-identity strong {
+    font-size: 0.95rem;
   }
 
-  .lifecycle-flow {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    max-width: 100%;
-    padding-bottom: 0.55rem;
+  .hero-focus-line {
+    margin-top: 0.3rem;
+    font-size: 0.82rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.95rem;
+  }
+
+  .hero-stack {
+    font-size: 0.75rem;
+    gap: 0.15rem 0.3rem;
+  }
+
+  .hero-lead {
+    font-size: 0.88rem;
   }
 
   .hero h1 {
-    margin: 0.15rem 0 0.1rem;
+    margin: 0.1rem 0 0;
   }
 
   .hero-actions {
-    margin: 0.55rem 0 0.25rem;
+    margin: 0.35rem 0 0.1rem;
+  }
+
+  .hero-meta {
+    font-size: 0.82rem;
+    gap: 0.4rem 0.85rem;
   }
 
   .project-grid,
@@ -1576,8 +1560,8 @@ button {
 
   .hero {
     min-height: auto;
-    padding-top: 1.25rem;
-    padding-bottom: 2.1rem;
+    padding-top: 0.85rem;
+    padding-bottom: 1.5rem;
     align-items: flex-start;
   }
 
@@ -1597,6 +1581,13 @@ button {
   .powerbi-placeholder {
     height: min(62vh, 680px);
     min-height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stack {
+    font-size: 12.5px;
+    gap: 0.12rem 0.28rem;
   }
 }
 
@@ -1710,11 +1701,11 @@ button {
   }
 
   .hero-tagline {
-    font-size: 1.02rem;
+    font-size: 0.95rem;
   }
 
   .hero-lead {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
   }
 
   .hero-actions {
