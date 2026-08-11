@@ -402,7 +402,9 @@ button {
 }
 
 .hero-identity .hero-stack {
-  font-size: calc(0.8rem - 2px);
+  font-size: 0.8125rem; /* ~13px: +~2px from prior calc(0.8rem - 2px) */
+  line-height: 1.55;
+  gap: 0.28rem 0;
 }
 
 .hero-stack .stack-chunk {
@@ -1678,6 +1680,12 @@ button {
   .hero-stack {
     font-size: 12.5px;
     gap: 0.12rem 0;
+  }
+
+  .hero-identity .hero-stack {
+    font-size: 13px;
+    line-height: 1.55;
+    gap: 0.3rem 0;
   }
 
   .hero-identity strong {
