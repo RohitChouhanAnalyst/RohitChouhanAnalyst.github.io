@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=20260811-mobile-fluid-type">
+  <link rel="stylesheet" href="css/styles.css?v=20260811-skills-tabs">
 
   <script type="application/ld+json">
   {
@@ -485,127 +485,144 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
           <p>Capability groups aligned to Data Analyst, BI, and Microsoft Fabric–oriented roles. Core skills are highlighted.</p>
         </div>
 
-        <div class="grid-3">
-          <article class="card skill-group reveal">
-            <h3>Core Analytics</h3>
-            <div class="chip-row">
-              <span class="chip chip-core">SQL</span>
-              <span class="chip chip-core">Power BI</span>
-              <span class="chip chip-core">DAX</span>
-              <span class="chip chip-core">Advanced Excel</span>
-              <span class="chip chip-core">Power Query</span>
-              <span class="chip">Data Analysis</span>
-              <span class="chip">KPI reporting</span>
-              <span class="chip">Reporting / MIS</span>
-              <span class="chip">Power Pivot</span>
-              <span class="chip">Pivot Tables</span>
-              <span class="chip">VLOOKUP / XLOOKUP</span>
-              <span class="chip">Macros</span>
-              <span class="chip">Google Sheets</span>
-              <span class="chip">RCA</span>
-            </div>
-          </article>
+        <div class="skills-explorer reveal">
+          <div class="skills-tabs" role="tablist" aria-label="Skill categories">
+            <button type="button" class="skills-tab is-active" role="tab" id="skills-tab-core" aria-selected="true" aria-controls="skills-panel-core" tabindex="0">Core Analytics</button>
+            <button type="button" class="skills-tab" role="tab" id="skills-tab-bi" aria-selected="false" aria-controls="skills-panel-bi" tabindex="-1">BI &amp; Visualization</button>
+            <button type="button" class="skills-tab" role="tab" id="skills-tab-sql" aria-selected="false" aria-controls="skills-panel-sql" tabindex="-1">SQL &amp; Databases</button>
+            <button type="button" class="skills-tab" role="tab" id="skills-tab-data" aria-selected="false" aria-controls="skills-panel-data" tabindex="-1">Data &amp; Engineering</button>
+            <button type="button" class="skills-tab" role="tab" id="skills-tab-prog" aria-selected="false" aria-controls="skills-panel-prog" tabindex="-1">Programming</button>
+            <button type="button" class="skills-tab" role="tab" id="skills-tab-cloud" aria-selected="false" aria-controls="skills-panel-cloud" tabindex="-1">Cloud &amp; Data Platforms</button>
+            <button type="button" class="skills-tab" role="tab" id="skills-tab-api" aria-selected="false" aria-controls="skills-panel-api" tabindex="-1">API &amp; Integration</button>
+            <button type="button" class="skills-tab" role="tab" id="skills-tab-ai" aria-selected="false" aria-controls="skills-panel-ai" tabindex="-1">AI &amp; Automation</button>
+          </div>
 
-          <article class="card skill-group reveal">
-            <h3>BI &amp; Visualization</h3>
-            <div class="chip-row">
-              <span class="chip chip-core">Power BI</span>
-              <span class="chip chip-core">Looker Studio</span>
-              <span class="chip">Metabase</span>
-              <span class="chip">Zoho Analytics</span>
-              <span class="chip">Tableau</span>
+          <div class="skills-panels">
+            <div class="skills-panel is-active" role="tabpanel" id="skills-panel-core" aria-labelledby="skills-tab-core">
+              <h3 class="skills-panel-title">Core Analytics</h3>
+              <div class="chip-row">
+                <span class="chip chip-core">SQL</span>
+                <span class="chip chip-core">Power BI</span>
+                <span class="chip chip-core">DAX</span>
+                <span class="chip chip-core">Advanced Excel</span>
+                <span class="chip chip-core">Power Query</span>
+                <span class="chip">Data Analysis</span>
+                <span class="chip">KPI reporting</span>
+                <span class="chip">Reporting / MIS</span>
+                <span class="chip">Power Pivot</span>
+                <span class="chip">Pivot Tables</span>
+                <span class="chip">VLOOKUP / XLOOKUP</span>
+                <span class="chip">Macros</span>
+                <span class="chip">Google Sheets</span>
+                <span class="chip">RCA</span>
+              </div>
             </div>
-          </article>
 
-          <article class="card skill-group reveal">
-            <h3>SQL &amp; Databases</h3>
-            <div class="chip-row">
-              <span class="chip chip-core">MySQL</span>
-              <span class="chip chip-core">PostgreSQL</span>
-              <span class="chip chip-core">CTEs</span>
-              <span class="chip chip-core">Window Functions</span>
-              <span class="chip">Views</span>
-              <span class="chip">Stored Procedures</span>
-              <span class="chip">JSON functions</span>
-              <span class="chip">Query optimization</span>
-              <span class="chip">MongoDB</span>
+            <div class="skills-panel" role="tabpanel" id="skills-panel-bi" aria-labelledby="skills-tab-bi" hidden>
+              <h3 class="skills-panel-title">BI &amp; Visualization</h3>
+              <div class="chip-row">
+                <span class="chip chip-core">Power BI</span>
+                <span class="chip chip-core">Looker Studio</span>
+                <span class="chip">Metabase</span>
+                <span class="chip">Zoho Analytics</span>
+                <span class="chip">Tableau</span>
+              </div>
             </div>
-          </article>
 
-          <article class="card skill-group reveal">
-            <h3>Data &amp; Engineering</h3>
-            <div class="chip-row">
-              <span class="chip chip-core">Microsoft Fabric</span>
-              <span class="chip chip-core">OneLake</span>
-              <span class="chip chip-core">Lakehouse</span>
-              <span class="chip chip-core">Warehouse</span>
-              <span class="chip">SQL Analytics Endpoint</span>
-              <span class="chip chip-core">Semantic models</span>
-              <span class="chip chip-core">Direct Lake</span>
-              <span class="chip">Star / Snowflake schema</span>
-              <span class="chip chip-core">Fabric Pipelines</span>
-              <span class="chip chip-core">PySpark</span>
-              <span class="chip chip-core">dbt</span>
-              <span class="chip">Delta Tables</span>
-              <span class="chip chip-core">ETL</span>
-              <span class="chip">Data transformation</span>
-              <span class="chip">Data validation</span>
-              <span class="chip">Data Quality</span>
-              <span class="chip">Data Governance</span>
-              <span class="chip">Fact &amp; Dimension modeling</span>
+            <div class="skills-panel" role="tabpanel" id="skills-panel-sql" aria-labelledby="skills-tab-sql" hidden>
+              <h3 class="skills-panel-title">SQL &amp; Databases</h3>
+              <div class="chip-row">
+                <span class="chip chip-core">MySQL</span>
+                <span class="chip chip-core">PostgreSQL</span>
+                <span class="chip chip-core">CTEs</span>
+                <span class="chip chip-core">Window Functions</span>
+                <span class="chip">Views</span>
+                <span class="chip">Stored Procedures</span>
+                <span class="chip">JSON functions</span>
+                <span class="chip">Query optimization</span>
+                <span class="chip">MongoDB</span>
+              </div>
             </div>
-          </article>
 
-          <article class="card skill-group reveal">
-            <h3>Programming</h3>
-            <div class="chip-row">
-              <span class="chip chip-core">Python</span>
-              <span class="chip">Pandas</span>
-              <span class="chip">NumPy</span>
-              <span class="chip">Jupyter</span>
-              <span class="chip">Data cleaning</span>
-              <span class="chip">EDA</span>
+            <div class="skills-panel" role="tabpanel" id="skills-panel-data" aria-labelledby="skills-tab-data" hidden>
+              <h3 class="skills-panel-title">Data &amp; Engineering</h3>
+              <div class="chip-row">
+                <span class="chip chip-core">Microsoft Fabric</span>
+                <span class="chip chip-core">Dataflow Gen2</span>
+                <span class="chip chip-core">OneLake</span>
+                <span class="chip chip-core">Lakehouse</span>
+                <span class="chip chip-core">Warehouse</span>
+                <span class="chip">SQL Analytics Endpoint</span>
+                <span class="chip chip-core">Semantic models</span>
+                <span class="chip chip-core">Direct Lake</span>
+                <span class="chip">Star / Snowflake schema</span>
+                <span class="chip chip-core">Fabric Pipelines</span>
+                <span class="chip chip-core">PySpark</span>
+                <span class="chip chip-core">dbt</span>
+                <span class="chip">Delta Tables</span>
+                <span class="chip chip-core">ETL/ELT</span>
+                <span class="chip">Data transformation</span>
+                <span class="chip">Data validation</span>
+                <span class="chip">Data Quality</span>
+                <span class="chip">Data Governance</span>
+                <span class="chip">Fact &amp; Dimension modeling</span>
+                <span class="chip">Pipelines</span>
+              </div>
             </div>
-          </article>
 
-          <article class="card skill-group reveal">
-            <h3>Cloud &amp; Data Platforms</h3>
-            <div class="chip-row">
-              <span class="chip">Azure Data Lake (ADLS Gen2)</span>
-              <span class="chip chip-core">Azure Data Factory</span>
-              <span class="chip">Azure Blob Storage</span>
-              <span class="chip">AWS S3</span>
-              <span class="chip">Apache Airflow</span>
-              <span class="chip">Snowflake</span>
-              <span class="chip">Amazon Redshift</span>
+            <div class="skills-panel" role="tabpanel" id="skills-panel-prog" aria-labelledby="skills-tab-prog" hidden>
+              <h3 class="skills-panel-title">Programming</h3>
+              <div class="chip-row">
+                <span class="chip chip-core">Python</span>
+                <span class="chip">Pandas</span>
+                <span class="chip">NumPy</span>
+                <span class="chip">Jupyter</span>
+                <span class="chip">Data cleaning</span>
+                <span class="chip">EDA</span>
+                <span class="chip">Git / Version Control</span>
+              </div>
             </div>
-          </article>
 
-          <article class="card skill-group reveal">
-            <h3>API &amp; Integration</h3>
-            <div class="chip-row">
-              <span class="chip chip-core">REST API integration</span>
-              <span class="chip">JSON processing</span>
-              <span class="chip">Google Sheets integration</span>
-              <span class="chip">Power Automate</span>
-              <span class="chip">Data validation</span>
-              <span class="chip">Production troubleshooting</span>
+            <div class="skills-panel" role="tabpanel" id="skills-panel-cloud" aria-labelledby="skills-tab-cloud" hidden>
+              <h3 class="skills-panel-title">Cloud &amp; Data Platforms</h3>
+              <div class="chip-row">
+                <span class="chip">Azure Data Lake (ADLS Gen2)</span>
+                <span class="chip chip-core">Azure Data Factory</span>
+                <span class="chip">Azure Blob Storage</span>
+                <span class="chip">AWS S3</span>
+                <span class="chip">Hadoop</span>
+                <span class="chip">Apache Airflow</span>
+                <span class="chip">Snowflake</span>
+                <span class="chip">Amazon Redshift</span>
+              </div>
             </div>
-          </article>
 
-          <article class="card skill-group reveal">
-            <h3>AI &amp; Automation</h3>
-            <div class="chip-row">
-              <span class="chip chip-core">n8n</span>
-              <span class="chip">AI-assisted Development</span>
-              <span class="chip">ChatGPT</span>
-              <span class="chip">Claude</span>
-              <span class="chip">Gemini</span>
-              <span class="chip">Prompt Engineering</span>
-              <span class="chip">SQL Debugging</span>
-              <span class="chip">MCP</span>
+            <div class="skills-panel" role="tabpanel" id="skills-panel-api" aria-labelledby="skills-tab-api" hidden>
+              <h3 class="skills-panel-title">API &amp; Integration</h3>
+              <div class="chip-row">
+                <span class="chip chip-core">REST API integration</span>
+                <span class="chip">JSON processing</span>
+                <span class="chip">Google Sheets integration</span>
+                <span class="chip">Power Automate</span>
+                <span class="chip">Data validation</span>
+                <span class="chip">Production troubleshooting</span>
+              </div>
             </div>
-          </article>
+
+            <div class="skills-panel" role="tabpanel" id="skills-panel-ai" aria-labelledby="skills-tab-ai" hidden>
+              <h3 class="skills-panel-title">AI &amp; Automation</h3>
+              <div class="chip-row">
+                <span class="chip chip-core">n8n</span>
+                <span class="chip">AI-assisted Development</span>
+                <span class="chip">ChatGPT</span>
+                <span class="chip">Claude</span>
+                <span class="chip">Gemini</span>
+                <span class="chip">Prompt Engineering</span>
+                <span class="chip">SQL Debugging</span>
+                <span class="chip">MCP</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -884,6 +901,6 @@ Warehouse · Semantic Model · Direct Lake · Power BI · DAX</pre>
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260811-pbi-shot" defer></script>
+  <script src="js/main.js?v=20260811-skills-tabs" defer></script>
 </body>
 </html>

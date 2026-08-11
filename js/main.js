@@ -288,4 +288,58 @@
   };
 
   mountPowerBiEmbeds();
+
+  // Skills section: accessible tabbed category explorer (all panels remain in DOM)
+  const skillsExplorer = document.querySelector(".skills-explorer");
+  if (skillsExplorer) {
+    const tabs = Array.from(skillsExplorer.querySelectorAll('[role="tab"]'));
+    const panels = Array.from(skillsExplorer.querySelectorAll('[role="tabpanel"]'));
+
+    const activateSkillsTab = (nextTab, { focus = false } = {}) => {
+      if (!nextTab || !tabs.includes(nextTab)) return;
+
+      tabs.forEach((tab) => {
+        const selected = tab === nextTab;
+        tab.classList.toggle("is-active", selected);
+        tab.setAttribute("aria-selected", selected ? "true" : "false");
+        tab.setAttribute("tabindex", selected ? "0" : "-1");
+      });
+
+      panels.forEach((panel) => {
+        const match = panel.id === nextTab.getAttribute("aria-controls");
+        panel.classList.toggle("is-active", match);
+        if (match) panel.removeAttribute("hidden");
+        else panel.setAttribute("hidden", "");
+      });
+
+      if (focus) nextTab.focus();
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => activateSkillsTab(tab));
+      tab.addEventListener("keydown", (event) => {
+        const currentIndex = tabs.indexOf(tab);
+        if (currentIndex < 0) return;
+
+        let targetIndex = null;
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+          targetIndex = (currentIndex + 1) % tabs.length;
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+          targetIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+        } else if (event.key === "Home") {
+          targetIndex = 0;
+        } else if (event.key === "End") {
+          targetIndex = tabs.length - 1;
+        } else if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          activateSkillsTab(tab, { focus: true });
+          return;
+        }
+
+        if (targetIndex === null) return;
+        event.preventDefault();
+        activateSkillsTab(tabs[targetIndex], { focus: true });
+      });
+    });
+  }
 })();
