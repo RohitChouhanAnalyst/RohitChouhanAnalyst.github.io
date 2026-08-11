@@ -497,10 +497,18 @@ button {
 
 .hero-identity {
   margin: 1.15rem auto 0;
-  max-width: 22rem;
+  max-width: 26rem;
   padding: 1.05rem 0.35rem 0;
   border-top: 1px solid rgba(253, 191, 5, 0.3);
   text-align: center;
+}
+
+.hero-identity-mobile {
+  display: none;
+}
+
+.hero-identity-desktop .hero-focus-line {
+  margin: 0;
 }
 
 .hero-identity strong {
@@ -517,7 +525,7 @@ button {
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.55;
   text-wrap: balance;
 }
 
@@ -1467,6 +1475,15 @@ button {
   .hero-identity {
     margin-top: 0.45rem;
     padding-top: 0.75rem;
+    max-width: 22rem;
+  }
+
+  .hero-identity-desktop {
+    display: none;
+  }
+
+  .hero-identity-mobile {
+    display: block;
   }
 
   .hero h1 {
